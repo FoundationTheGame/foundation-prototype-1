@@ -56,7 +56,151 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: City
+      value: Dundee
+      type: 7
+      typeString: CustomFieldType_Location
+    - title: IsMaster
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: County
+      value: Ambersmith
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: KnowsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: PlayerReputation
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: PlayerInfluence
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    portrait: {fileID: 2800000, guid: ecd825a5ff757c540b06c29f800cf4d6, type: 3}
+    alternatePortraits: []
+  - id: 5
+    fields:
+    - title: Name
+      value: Edwin
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
       value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsLord
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: City
+      value: Dundee
+      type: 7
+      typeString: CustomFieldType_Location
+    - title: IsMaster
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: County
+      value: Angus
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: KnowsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: PlayerReputation
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: PlayerInfluence
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    portrait: {fileID: 2800000, guid: eeaff8a59125ada41bdb25cae9d9150a, type: 3}
+    alternatePortraits: []
+  - id: 6
+    fields:
+    - title: Name
+      value: Giselle
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsLord
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: City
+      value: Dundee
+      type: 7
+      typeString: CustomFieldType_Location
+    - title: IsMaster
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: County
+      value: Guthrie
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: KnowsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: PlayerReputation
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: PlayerInfluence
+      value: 1
+      type: 1
+      typeString: CustomFieldType_Number
+    portrait: {fileID: 2800000, guid: 11faae536b7d86e409d67731bd39adba, type: 3}
+    alternatePortraits: []
+  - id: 8
+    fields:
+    - title: Name
+      value: Tristana
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsLord
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: City
+      value: Dundee
       type: 7
       typeString: CustomFieldType_Location
     - title: IsMaster
@@ -79,47 +223,7 @@ MonoBehaviour:
       value: 1
       type: 1
       typeString: CustomFieldType_Number
-    portrait: {fileID: 2800000, guid: ecd825a5ff757c540b06c29f800cf4d6, type: 3}
-    alternatePortraits: []
-  - id: 5
-    fields:
-    - title: Name
-      value: Edwin
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: 
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: 
-    portrait: {fileID: 2800000, guid: eeaff8a59125ada41bdb25cae9d9150a, type: 3}
-    alternatePortraits: []
-  - id: 6
-    fields:
-    - title: Name
-      value: Giselle
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: 
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: 
-    portrait: {fileID: 2800000, guid: 11faae536b7d86e409d67731bd39adba, type: 3}
+    portrait: {fileID: 2800000, guid: 34c60f8a269cb144e8c7ef0dd693d5cb, type: 3}
     alternatePortraits: []
   - id: 7
     fields:
@@ -181,46 +285,6 @@ MonoBehaviour:
       typeString: 
     portrait: {fileID: 2800000, guid: f5d2441a407015d45b345bfc2108d9a5, type: 3}
     alternatePortraits: []
-  - id: 1
-    fields:
-    - title: Name
-      value: Player
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: 
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: True
-      type: 2
-      typeString: 
-    portrait: {fileID: 0}
-    alternatePortraits: []
-  - id: 8
-    fields:
-    - title: Name
-      value: Tristana
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: 
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: 
-    portrait: {fileID: 2800000, guid: 34c60f8a269cb144e8c7ef0dd693d5cb, type: 3}
-    alternatePortraits: []
   - id: 9
     fields:
     - title: Name
@@ -241,12 +305,32 @@ MonoBehaviour:
       typeString: 
     portrait: {fileID: 2800000, guid: 553bffb0bf5598646a2141edcdd42af9, type: 3}
     alternatePortraits: []
+  - id: 1
+    fields:
+    - title: Name
+      value: Player
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: 
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: True
+      type: 2
+      typeString: 
+    portrait: {fileID: 0}
+    alternatePortraits: []
   items: []
   locations:
   - id: 1
     fields:
     - title: Name
-      value: New Location 1
+      value: Dundee
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -257,8 +341,110 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+    - title: IsCity
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsCounty
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
     - title: Lord
+      value: 8
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Master
       value: 
+      type: 5
+      typeString: CustomFieldType_Actor
+  - id: 2
+    fields:
+    - title: Name
+      value: Ambersmith
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsCity
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsCounty
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Lord
+      value: 8
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Master
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+  - id: 3
+    fields:
+    - title: Name
+      value: Angus
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsCity
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsCounty
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Lord
+      value: 8
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Master
+      value: 5
+      type: 5
+      typeString: CustomFieldType_Actor
+  - id: 4
+    fields:
+    - title: Name
+      value: Guthrie
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsCity
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsCounty
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Lord
+      value: 8
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Master
+      value: 6
       type: 5
       typeString: CustomFieldType_Actor
   variables:
