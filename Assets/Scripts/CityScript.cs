@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 
 public class CityScript : MonoBehaviour {
 
 	
 	public GameObject countyName;
 	public GameObject cityName;
+    public GameObject option1;
+    public GameObject option2;
+    public GameObject option3;
+    public GameObject option4;
 
-	private Text countyNameText;
+    private Text countyNameText;
 	private Text cityNameText;
 	
 
@@ -23,16 +28,26 @@ public class CityScript : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
+        option1.SetActive(false);
+        option2.SetActive(false);
+        option3.SetActive(false);
+        option4.SetActive(false);
 
-		countyNameText = countyName.GetComponent<Text>();
+        countyNameText = countyName.GetComponent<Text>();
 		cityNameText = cityName.GetComponent<Text>();
 	
-			cityNameText.text = "City of " + this.gameObject.name;
-			countyNameText.text = " ";
-			
-		
-		
-	
+		cityNameText.text = "City of " + this.gameObject.name;
+		countyNameText.text = " ";
 
-	}
+        option1.GetComponentInChildren<Text>().text = "Talk to Lord";
+        option1.GetComponent<Button>().onClick.AddListener(() => { DialogueManager.StartConversation(this.gameObject.name); });
+        option1.SetActive(true);
+
+        option2.GetComponentInChildren<Text>().text = "Go to Market";
+        option2.SetActive(true);
+
+        option3.GetComponentInChildren<Text>().text = "Go to Warehouse";
+        option3.SetActive(true);
+
+    }
 }
