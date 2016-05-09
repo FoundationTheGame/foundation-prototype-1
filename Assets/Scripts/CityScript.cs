@@ -12,6 +12,7 @@ public class CityScript : MonoBehaviour {
     public GameObject option2;
     public GameObject option3;
     public GameObject option4;
+    public GameObject marketPanel;
 
     private Text countyNameText;
 	private Text cityNameText;
@@ -44,6 +45,13 @@ public class CityScript : MonoBehaviour {
         option1.SetActive(true);
 
         option2.GetComponentInChildren<Text>().text = "Go to Market";
+        option2.GetComponent<Button>().onClick.AddListener(() => 
+        {   Market.Teste(marketPanel);
+            option1.SetActive(false);
+            option2.SetActive(false);
+            option3.SetActive(false);
+            option4.SetActive(false);
+        });
         option2.SetActive(true);
 
         option3.GetComponentInChildren<Text>().text = "Go to Warehouse";
