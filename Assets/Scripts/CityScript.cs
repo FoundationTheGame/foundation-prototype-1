@@ -29,6 +29,7 @@ public class CityScript : MonoBehaviour {
 	public GameObject warehouseJewelry;
 	public GameObject warehouseFurniture;
 	public GameObject warehouseClothes;
+	public GameObject warehouseLevel;
 
     private Text countyNameText;
 	private Text cityNameText;
@@ -99,7 +100,35 @@ public class CityScript : MonoBehaviour {
             DisableButtons();
 
 			warehouseMaterialText = warehouseFish.GetComponent<Text>();
-			warehouseMaterialText.text = "Fish: ";
+			warehouseMaterialText.text = "Fish: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt;
+			warehouseMaterialText = warehouseMeat.GetComponent<Text>();
+			warehouseMaterialText.text = "Meat: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt;
+			warehouseMaterialText = warehouseCereals.GetComponent<Text>();
+			warehouseMaterialText.text = "Cereals: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Cereals").AsInt;
+			warehouseMaterialText = warehouseIronOre.GetComponent<Text>();
+			warehouseMaterialText.text = "Iron Ore: "+ DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt;
+			warehouseMaterialText = warehouseGoldOre.GetComponent<Text>();
+			warehouseMaterialText.text = "Gold Ore: "+ DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt;
+			warehouseMaterialText = warehouseWood.GetComponent<Text>();
+			warehouseMaterialText.text = "Wood: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt;
+			warehouseMaterialText = warehouseWool.GetComponent<Text>();
+			warehouseMaterialText.text = "Wool: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt;
+			warehouseMaterialText = warehouseBread.GetComponent<Text>();
+			warehouseMaterialText.text = "Bread: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt;
+			warehouseMaterialText = warehouseAle.GetComponent<Text>();
+			warehouseMaterialText.text = "Ale: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt;
+			warehouseMaterialText = warehouseTools.GetComponent<Text>();
+			warehouseMaterialText.text = "Tools: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt;
+			warehouseMaterialText = warehouseWeapons.GetComponent<Text>();
+			warehouseMaterialText.text = "Weapons: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt;
+			warehouseMaterialText = warehouseJewelry.GetComponent<Text>();
+			warehouseMaterialText.text = "Jewelry: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt;
+			warehouseMaterialText = warehouseFurniture.GetComponent<Text>();
+			warehouseMaterialText.text = "Furniture: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt;
+			warehouseMaterialText = warehouseClothes.GetComponent<Text>();
+			warehouseMaterialText.text = "Clothes: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
+			//warehouseMaterialText = warehouseLevel.GetComponent<Text>();
+			//warehouseMaterialText.text = "Level: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt +" (Max Capacity "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt*100 +")";
 
 			option4.GetComponentInChildren<Text>().text = "Leave Warehouse";
             option4.GetComponent<Button>().onClick.AddListener(() => {
