@@ -60,7 +60,6 @@ public class PlayerScript : MonoBehaviour {
 		if (inc + increment >= 0 && inc + increment <= 3)
 			increment += inc;
 
-		Debug.Log(increment);
 		switch (increment){
 			case 0:
 				timer = 5.0f;

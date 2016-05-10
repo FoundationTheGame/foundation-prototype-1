@@ -5,7 +5,6 @@ using PixelCrushers.DialogueSystem;
 
 public class CityScript : MonoBehaviour {
 
-	
 	public GameObject countyName;
 	public GameObject cityName;
     public GameObject option1;
@@ -20,8 +19,7 @@ public class CityScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,10 +27,7 @@ public class CityScript : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-        option1.SetActive(false);
-        option2.SetActive(false);
-        option3.SetActive(false);
-        option4.SetActive(false);
+        DisableButtons();
 
         countyNameText = countyName.GetComponent<Text>();
 		cityNameText = cityName.GetComponent<Text>();
@@ -41,12 +36,23 @@ public class CityScript : MonoBehaviour {
 		countyNameText.text = " ";
 
         option1.GetComponentInChildren<Text>().text = "Talk to Lord";
-        option1.GetComponent<Button>().onClick.AddListener(() => { DialogueManager.StartConversation(this.gameObject.name); });
-        option1.SetActive(true);
+        option1.GetComponent<Button>().onClick.AddListener(() => {
+            DialogueManager.StartConversation(this.gameObject.name);
+            DisableButtons();
 
+            option4.GetComponentInChildren<Text>().text = "Leave Conversation";
+            option4.GetComponent<Button>().onClick.AddListener(() => {
+                DialogueManager.StopConversation();
+                OnMouseDown();
+            });
+            option4.SetActive(true);
+        });
+        option1.SetActive(true);
+        
         option2.GetComponentInChildren<Text>().text = "Go to Market";
         option2.GetComponent<Button>().onClick.AddListener(() => 
-        {   Market.Teste(marketPanel);
+        {
+            Market.Teste(marketPanel);
             option1.SetActive(false);
             option2.SetActive(false);
             option3.SetActive(false);
@@ -56,6 +62,17 @@ public class CityScript : MonoBehaviour {
 
         option3.GetComponentInChildren<Text>().text = "Go to Warehouse";
         option3.SetActive(true);
+    }
 
+    void DisableButtons()
+    {
+        option1.SetActive(false);
+        option1.GetComponent<Button>().onClick.RemoveAllListeners();
+        option2.SetActive(false);
+        option2.GetComponent<Button>().onClick.RemoveAllListeners();
+        option3.SetActive(false);
+        option3.GetComponent<Button>().onClick.RemoveAllListeners();
+        option4.SetActive(false);
+        option4.GetComponent<Button>().onClick.RemoveAllListeners();
     }
 }
