@@ -127,8 +127,8 @@ public class CityScript : MonoBehaviour {
 			warehouseMaterialText.text = "Furniture: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt;
 			warehouseMaterialText = warehouseClothes.GetComponent<Text>();
 			warehouseMaterialText.text = "Clothes: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
-			//warehouseMaterialText = warehouseLevel.GetComponent<Text>();
-			//warehouseMaterialText.text = "Level: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt +" (Max Capacity "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt*100 +")";
+			warehouseMaterialText = warehouseLevel.GetComponent<Text>();
+			warehouseMaterialText.text = "Level: "+ DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt +" (Max Capacity "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt*100 +")";
 
 			option4.GetComponentInChildren<Text>().text = "Leave Warehouse";
             option4.GetComponent<Button>().onClick.AddListener(() => {
