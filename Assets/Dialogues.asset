@@ -653,6 +653,10 @@ MonoBehaviour:
       value: 0
       type: 1
       typeString: CustomFieldType_Number
+    - title: WarehouseLevel
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
   variables:
   - id: 1
     fields:
@@ -1412,6 +1416,42 @@ MonoBehaviour:
         destinationDialogueID: 38
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 46
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 8
+        destinationConversationID: 1
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -1745,8 +1785,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.1664
-        y: 372.2324
+        x: 649.33026
+        y: 373.87177
         width: 160
         height: 30
     - id: 14
@@ -1814,8 +1854,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.95844
-        y: 448.90533
+        x: 650.12225
+        y: 450.54468
         width: 160
         height: 30
     - id: 15
@@ -1883,8 +1923,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.5911
-        y: 410.1406
+        x: 649.75507
+        y: 411.77997
         width: 160
         height: 30
     - id: 17
@@ -1952,8 +1992,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 661
-        y: 487.46332
+        x: 651.1639
+        y: 489.10254
         width: 160
         height: 30
     - id: 18
@@ -2021,8 +2061,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 661
-        y: 525.2682
+        x: 651.1639
+        y: 526.90753
         width: 160
         height: 30
     - id: 19
@@ -2090,8 +2130,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 661
-        y: 560.6338
+        x: 651.1639
+        y: 562.27313
         width: 160
         height: 30
     - id: 20
@@ -2154,6 +2194,8 @@ MonoBehaviour:
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*0.75);
 
         Variable["Reputation"] = Variable["Reputation"] + 2;
+
+        Location["Dundee Warehouse"].Wood = Location["Dundee Warehouse"].Wood + 10;
 
 '
       canvasRect:
@@ -2807,6 +2849,72 @@ MonoBehaviour:
         destinationDialogueID: 38
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 46
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 29
+        destinationConversationID: 1
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -3040,7 +3148,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*0.75)] gold.
+        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*0.60)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3074,84 +3182,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
+        >= 35)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.41034
-        y: 645.4802
+        x: 656.1541
+        y: 926.57153
         width: 160
         height: 30
     - id: 34
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*1.25)] gold.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 34
-        destinationConversationID: 1
-        destinationDialogueID: 41
-        isConnector: 0
-        priority: 2
-      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 658.9365
-        y: 722.1532
-        width: 160
-        height: 30
-    - id: 35
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -3206,18 +3245,87 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
+        originDialogueID: 34
+        destinationConversationID: 1
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        >= 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 655.68024
+        y: 1004.5104
+        width: 160
+        height: 30
+    - id: 35
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*0.8)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
         originDialogueID: 35
         destinationConversationID: 1
         destinationDialogueID: 40
         isConnector: 0
         priority: 2
       conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
+        >= 35)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 658.5692
-        y: 683.3885
+        x: 655.31305
+        y: 964.4798
         width: 160
         height: 30
     - id: 36
@@ -3247,7 +3355,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*0.75)] gold.
+        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*0.6)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3281,15 +3389,84 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
+        >= 35)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.978
-        y: 760.7111
+        x: 656.72174
+        y: 1041.8025
         width: 160
         height: 30
     - id: 37
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*0.8)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 37
+        destinationConversationID: 1
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        >= 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.72174
+        y: 1079.6079
+        width: 160
+        height: 30
+    - id: 38
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -3344,87 +3521,18 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 37
-        destinationConversationID: 1
-        destinationDialogueID: 43
-        isConnector: 0
-        priority: 2
-      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 659.978
-        y: 798.5162
-        width: 160
-        height: 30
-    - id: 38
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*1.25)] gold.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
         originDialogueID: 38
         destinationConversationID: 1
         destinationDialogueID: 44
         isConnector: 0
         priority: 2
       conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
-        < 35)
+        >= 35)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 659.978
-        y: 833.88153
+        x: 656.72174
+        y: 1114.9734
         width: 160
         height: 30
     - id: 39
@@ -3484,15 +3592,15 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*0.75);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*0.60);
 
         Variable["Reputation"] = Variable["Reputation"] + 2;
 
 '
       canvasRect:
         serializedVersion: 2
-        x: 831.31537
-        y: 646.69977
+        x: 839.53455
+        y: 926.15173
         width: 160
         height: 30
     - id: 40
@@ -3552,13 +3660,13 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*0.8);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;'
       canvasRect:
         serializedVersion: 2
-        x: 829.12006
-        y: 686.94366
+        x: 837.33923
+        y: 966.3956
         width: 160
         height: 30
     - id: 41
@@ -3618,13 +3726,13 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*1.25);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*1);
 
         Variable["Reputation"] = Variable["Reputation"] + 7;'
       canvasRect:
         serializedVersion: 2
-        x: 829.36395
-        y: 722.3095
+        x: 837.5831
+        y: 1001.7615
         width: 160
         height: 30
     - id: 42
@@ -3684,15 +3792,15 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*25*0.75);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*25*0.6);
 
         Variable["Reputation"] = Variable["Reputation"] + 2;
 
 '
       canvasRect:
         serializedVersion: 2
-        x: 827.9006
-        y: 762.5533
+        x: 836.11975
+        y: 1042.0054
         width: 160
         height: 30
     - id: 43
@@ -3752,13 +3860,13 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*25*0.8);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;'
       canvasRect:
         serializedVersion: 2
-        x: 828.1445
-        y: 800.3582
+        x: 836.36365
+        y: 1079.8103
         width: 160
         height: 30
     - id: 44
@@ -3818,13 +3926,427 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*1.25);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].Wood_Price)*10*1);
 
         Variable["Reputation"] = Variable["Reputation"] + 7;'
       canvasRect:
         serializedVersion: 2
-        x: 827.1689
-        y: 834.50433
+        x: 835.38806
+        y: 1113.9565
+        width: 160
+        height: 30
+    - id: 45
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*0.75)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 45
+        destinationConversationID: 1
+        destinationDialogueID: 20
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.27637
+        y: 673.97253
+        width: 160
+        height: 30
+    - id: 46
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*1.25)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 46
+        destinationConversationID: 1
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 655.6985
+        y: 750.64545
+        width: 160
+        height: 30
+    - id: 47
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 10 wood for [lua((Location["Dundee"].Wood_Price)*10*1)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 47
+        destinationConversationID: 1
+        destinationDialogueID: 21
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.70105
+        y: 711.88074
+        width: 160
+        height: 30
+    - id: 48
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*0.75)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 48
+        destinationConversationID: 1
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.74
+        y: 789.2035
+        width: 160
+        height: 30
+    - id: 49
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*1)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 49
+        destinationConversationID: 1
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.74
+        y: 827.0083
+        width: 160
+        height: 30
+    - id: 50
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 25 wood for [lua((Location["Dundee"].Wood_Price)*25*1.25)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 50
+        destinationConversationID: 1
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: (Actor["Balthazar"].KnowsPlayer == true) and (Variable["Reputation"]
+        < 35)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 656.74
+        y: 862.3739
         width: 160
         height: 30
   - id: 2
