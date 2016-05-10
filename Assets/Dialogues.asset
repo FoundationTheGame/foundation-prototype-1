@@ -357,6 +357,122 @@ MonoBehaviour:
       value: 
       type: 5
       typeString: CustomFieldType_Actor
+    - title: Wood Price
+      value: 4
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Fish Price
+      value: 10
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Meat Price
+      value: 7
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Cereal Price
+      value: 3
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Iron Ore Price
+      value: 5
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Gold Ore Price
+      value: 15
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wool Price
+      value: 10
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Bread Price
+      value: 7
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Ale Price
+      value: 8
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Tools Price
+      value: 10
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Weapons Price
+      value: 15
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Jewelry Price
+      value: 30
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Furniture Price
+      value: 12
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Clothes Price
+      value: 16
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wood
+      value: 267
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Fish
+      value: 15
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Meat
+      value: 30
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Cereal
+      value: 221
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Iron Ore
+      value: 150
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Gold Ore
+      value: 15
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wool
+      value: 35
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Bread
+      value: 70
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Ale
+      value: 47
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Tools
+      value: 29
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Weapons
+      value: 20
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Jewelry
+      value: 7
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Furniture
+      value: 33
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Clothes
+      value: 12
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Player Has Warehouse
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
   - id: 2
     fields:
     - title: Name
@@ -447,6 +563,148 @@ MonoBehaviour:
       value: 6
       type: 5
       typeString: CustomFieldType_Actor
+  - id: 5
+    fields:
+    - title: Name
+      value: Dundee Warehouse
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsCity
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: IsCounty
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Lord
+      value: 
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Master
+      value: 
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Wood Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Fish Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Meat Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Cereal Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Iron Ore Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Gold Ore Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wool Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Bread Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Ale Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Tools Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Weapons Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Jewelry Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Furniture Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Clothes Price
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wood
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Fish
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Meat
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Cereal
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Iron Ore
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Gold Ore
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Wool
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Bread
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Ale
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Tools
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Weapons
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Jewelry
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Furniture
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Clothes
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
   variables:
   - id: 1
     fields:
@@ -686,12 +944,12 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Actor["Balthazar"].KnowsPlayer == false
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
-        y: 70
+        x: 117.560974
+        y: 79.7561
         width: 160
         height: 30
     - id: 2
@@ -1435,7 +1693,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 100 wood for 100 gold.
+        value: 100 wood for [lua((Location["Dundee"].Wood_Price)*100)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1472,8 +1730,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 381.11765
-        y: 435.64706
+        x: 503.06882
+        y: 361.2568
         width: 160
         height: 30
     - id: 14
@@ -1540,8 +1798,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 679.4706
-        y: 391.58823
+        x: 503.8609
+        y: 435.49072
         width: 160
         height: 30
     - id: 15
@@ -1608,8 +1866,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 546.1765
-        y: 452.82355
+        x: 502.27405
+        y: 397.9455
         width: 160
         height: 30
     - id: 16
@@ -1667,7 +1925,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'Actor["Balthazar"].KnowsPlayer = true;
+
+        Actor["Balthazar"].PlayerReputation = Actor["Balthazar"].PlayerReputation
+        + 10;
+
+        if Actor["Balthazar"].PlayerReputation > 100 then Actor["Balthazar"].PlayerReputation
+        = 100;'
       canvasRect:
         serializedVersion: 2
         x: 573.2353
