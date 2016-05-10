@@ -51,6 +51,8 @@ public class PlayerScript : MonoBehaviour {
 		dateText.text = date.ToString("d MMM yyyy");
 		updateTimespeed(0);
 		}
+
+
 	}
 
 	public void updateTimespeed (int inc) {
