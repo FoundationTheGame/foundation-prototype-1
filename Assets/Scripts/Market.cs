@@ -16,6 +16,6 @@ public class Market : MonoBehaviour {
 
     public static void Teste(GameObject marketPanel) {
         marketPanel.SetActive(true);
-        marketPanel.GetComponentInChildren<Text>().text = "Hello World";
+        marketPanel.GetComponentInChildren<Text>().text = "Marketplace";
     }
 }

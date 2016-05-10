@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using PixelCrushers.DialogueSystem;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -29,9 +30,9 @@ public class PlayerScript : MonoBehaviour {
 	dateText = playerDate.GetComponent<Text>();
 	moneyText = playerMoney.GetComponent<Text>();
 
-	money = 1000;
-	reputation = 0.0f;
-	influence = 0.0f;
+	money = DialogueLua.GetVariable("Money").AsInt;
+	reputation = DialogueLua.GetVariable("Reputation").AsFloat;
+	influence = DialogueLua.GetVariable("Influence").AsFloat;
 	
 	moneyText.text = ""+money;
 
@@ -44,6 +45,16 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		moneyText = playerMoney.GetComponent<Text>();
+		dateText = playerDate.GetComponent<Text>();
+		moneyText = playerMoney.GetComponent<Text>();
+
+		money = DialogueLua.GetVariable("Money").AsInt;
+		reputation = DialogueLua.GetVariable("Reputation").AsFloat;
+		influence = DialogueLua.GetVariable("Influence").AsFloat;
+	
+		moneyText.text = ""+money;
+
 		timer -= Time.deltaTime;
 		if (timer <= 0.0f){
 		dateText = playerDate.GetComponent<Text>();
