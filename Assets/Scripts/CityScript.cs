@@ -33,6 +33,19 @@ public class CityScript : MonoBehaviour {
 
 	//Market Materials
 	public GameObject marketFish;
+	public GameObject marketMeat;
+	public GameObject marketCereals;
+	public GameObject marketIronOre;
+	public GameObject marketGoldOre;
+	public GameObject marketWood;
+	public GameObject marketWool;
+	public GameObject marketBread;
+	public GameObject marketAle;
+	public GameObject marketTools;
+	public GameObject marketWeapons;
+	public GameObject marketJewelry;
+	public GameObject marketFurniture;
+	public GameObject marketClothes;
 
     private Text countyNameText;
 	private Text cityNameText;
@@ -85,11 +98,102 @@ public class CityScript : MonoBehaviour {
             DisableButtons();
 
 			marketMaterialText = marketFish.GetComponent<Text>();
-			marketMaterialText.text = "Fish          "+ 
-			DialogueLua.GetLocationField("Dundee", "Fish").AsInt + "          " + 
-			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*1.1) + "               " + 
-			DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt + "               " + 
+			marketMaterialText.text = "Fish      "+ 
+			DialogueLua.GetLocationField("Dundee", "Fish").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt + "    " + 
 			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketMeat.GetComponent<Text>();
+			marketMaterialText.text = "Meat      "+ 
+			DialogueLua.GetLocationField("Dundee", "Meat").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "MeatPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "MeatPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketCereals.GetComponent<Text>();
+			marketMaterialText.text = "Cereal    "+ 
+			DialogueLua.GetLocationField("Dundee", "Cereal").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "CerealPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "CerealPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketIronOre.GetComponent<Text>();
+			marketMaterialText.text = "Iron Ore  "+ 
+			DialogueLua.GetLocationField("Dundee", "IronOre").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "IronOrePrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "IronOrePrice").AsFloat)*0.9);
+
+			marketMaterialText = marketGoldOre.GetComponent<Text>();
+			marketMaterialText.text = "Gold Ore  "+ 
+			DialogueLua.GetLocationField("Dundee", "GoldOre").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "GoldOrePrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketWood.GetComponent<Text>();
+			marketMaterialText.text = "Wood      "+ 
+			DialogueLua.GetLocationField("Dundee", "Wood").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WoodPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WoodPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketWool.GetComponent<Text>();
+			marketMaterialText.text = "Wool      "+ 
+			DialogueLua.GetLocationField("Dundee", "Wool").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WoolPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WoolPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketClothes.GetComponent<Text>();
+			marketMaterialText.text = "Clothes   "+ 
+			DialogueLua.GetLocationField("Dundee", "Clothes").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "ClothesPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "ClothesPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketFurniture.GetComponent<Text>();
+			marketMaterialText.text = "Furniture "+ 
+			DialogueLua.GetLocationField("Dundee", "Furniture").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "FurniturePrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "FurniturePrice").AsFloat)*0.9);
+
+			marketMaterialText = marketJewelry.GetComponent<Text>();
+			marketMaterialText.text = "Jewelry   "+ 
+			DialogueLua.GetLocationField("Dundee", "Jewelry").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "JewelryPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "JewelryPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketWeapons.GetComponent<Text>();
+			marketMaterialText.text = "Weapons   "+ 
+			DialogueLua.GetLocationField("Dundee", "Weapons").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WeaponsPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "WeaponsPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketTools.GetComponent<Text>();
+			marketMaterialText.text = "Tools     "+ 
+			DialogueLua.GetLocationField("Dundee", "Tools").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "ToolsPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "ToolsPrice").AsFloat)*0.9);
+
+			marketMaterialText = marketAle.GetComponent<Text>();
+			marketMaterialText.text = "Ale       "+ 
+			DialogueLua.GetLocationField("Dundee", "Ale").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "AlePrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "AlePrice").AsFloat)*0.9);
+
+			marketMaterialText = marketBread.GetComponent<Text>();
+			marketMaterialText.text = "Bread     "+ 
+			DialogueLua.GetLocationField("Dundee", "Bread").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "BreadPrice").AsFloat)*1.1) + "    " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt + "    " + 
+			((DialogueLua.GetLocationField("Dundee", "BreadPrice").AsFloat)*0.9);
 
 			option4.GetComponentInChildren<Text>().text = "Leave Market";
             option4.GetComponent<Button>().onClick.AddListener(() => {
