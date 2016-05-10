@@ -31,9 +31,13 @@ public class CityScript : MonoBehaviour {
 	public GameObject warehouseClothes;
 	public GameObject warehouseLevel;
 
+	//Market Materials
+	public GameObject marketFish;
+
     private Text countyNameText;
 	private Text cityNameText;
 	private Text warehouseMaterialText;
+	private Text marketMaterialText;
 	
 
 	// Use this for initialization
@@ -79,6 +83,13 @@ public class CityScript : MonoBehaviour {
 			marketPanel.SetActive(true);
 			marketPanel.GetComponentInChildren<Text>().text = "Marketplace";
             DisableButtons();
+
+			marketMaterialText = marketFish.GetComponent<Text>();
+			marketMaterialText.text = "Fish          "+ 
+			DialogueLua.GetLocationField("Dundee", "Fish").AsInt + "          " + 
+			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*1.1) + "               " + 
+			DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt + "               " + 
+			((DialogueLua.GetLocationField("Dundee", "FishPrice").AsFloat)*0.9);
 
 			option4.GetComponentInChildren<Text>().text = "Leave Market";
             option4.GetComponent<Button>().onClick.AddListener(() => {
@@ -128,7 +139,7 @@ public class CityScript : MonoBehaviour {
 			warehouseMaterialText = warehouseClothes.GetComponent<Text>();
 			warehouseMaterialText.text = "Clothes: "+ DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
 			warehouseMaterialText = warehouseLevel.GetComponent<Text>();
-			warehouseMaterialText.text = "Level: "+ DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt +" (Max Capacity "+ DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt*100 +")";
+			warehouseMaterialText.text = "Level: "+ DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt +" (Max Capacity "+ ((DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt)*100) +" units)";
 
 			option4.GetComponentInChildren<Text>().text = "Leave Warehouse";
             option4.GetComponent<Button>().onClick.AddListener(() => {
