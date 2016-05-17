@@ -1909,7 +1909,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*.9)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2047,7 +2047,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*.9)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2217,7 +2217,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 20
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -2296,8 +2302,8 @@ MonoBehaviour:
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
         serializedVersion: 2
-        x: 860.3022
-        y: 451.41748
+        x: 846.8875
+        y: 453.8565
         width: 160
         height: 30
     - id: 25
@@ -2370,8 +2376,8 @@ MonoBehaviour:
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
         serializedVersion: 2
-        x: 845.81964
-        y: 561.21014
+        x: 854.35626
+        y: 556.3321
         width: 160
         height: 30
     - id: 26
@@ -2829,7 +2835,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.60)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2979,7 +2985,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3054,7 +3060,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.6)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3129,7 +3135,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3305,11 +3311,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.6)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 39
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.60);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
 
         Variable["Reputation"] = Variable["Reputation"] + 2;
 
@@ -3373,11 +3385,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;
 
@@ -3441,7 +3459,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 41
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
@@ -3509,11 +3533,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.6)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 42
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.6);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
 
         Variable["Reputation"] = Variable["Reputation"] + 2;
 
@@ -3577,11 +3607,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 43
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;
 
@@ -3645,7 +3681,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 44
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
@@ -3831,7 +3873,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*.9)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3975,7 +4017,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*.9)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4232,7 +4274,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 55
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
       userScript: 
       canvasRect:
@@ -4294,13 +4342,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 56
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1040.9059
-        y: 561.1638
+        x: 1039.6864
+        y: 559.94434
         width: 160
         height: 30
     - id: 59
@@ -4356,8 +4410,14 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.6)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 59
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4418,8 +4478,14 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 60
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4480,7 +4546,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 61
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
       userScript: 
       canvasRect:
@@ -4542,7 +4614,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 62
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 
       canvasRect:
@@ -4604,8 +4682,14 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 63
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4666,8 +4750,14 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.6)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 64
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4728,11 +4818,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*.9)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;
 
@@ -4796,7 +4892,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 67
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
@@ -4864,11 +4966,17 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*.9)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 69
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
 
         Variable["Reputation"] = Variable["Reputation"] + 5;
 
@@ -4932,7 +5040,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 70
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
@@ -5007,7 +5121,7 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -5136,7 +5250,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 74
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 
       canvasRect:
@@ -5198,8 +5318,14 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*.9)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 75
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -5584,13 +5710,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 84
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1012.36035
-        y: 657.5427
+        x: 947.7262
+        y: 641.6891
         width: 160
         height: 30
   - id: 2
