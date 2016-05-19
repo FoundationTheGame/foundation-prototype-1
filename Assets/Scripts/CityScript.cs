@@ -11,6 +11,11 @@ public class CityScript : MonoBehaviour {
     public GameObject option2;
     public GameObject option3;
     public GameObject option4;
+    public GameObject DundeeFocus;
+    public GameObject AmbersmithFocus;
+    public GameObject AngusFocus;
+    public GameObject GuthrieFocus;
+    public GameObject focused;
     public GameObject marketPanel;
 	public GameObject warehousePanel;
 
@@ -51,6 +56,7 @@ public class CityScript : MonoBehaviour {
 
 	void OnMouseDown(){
         DisableButtons();
+        unFocus();
 
         countyNameText = countyName.GetComponent<Text>();
 		cityNameText = cityName.GetComponent<Text>();
@@ -73,6 +79,8 @@ public class CityScript : MonoBehaviour {
             option4.SetActive(true);
         });
         option1.SetActive(true);
+        focused.SetActive(true);
+
         
 		//Market
 
@@ -161,5 +169,13 @@ public class CityScript : MonoBehaviour {
         option3.GetComponent<Button>().onClick.RemoveAllListeners();
         option4.SetActive(false);
         option4.GetComponent<Button>().onClick.RemoveAllListeners();
+    }
+
+    void unFocus()
+    {
+        DundeeFocus.SetActive(false);
+        AmbersmithFocus.SetActive(false);
+        GuthrieFocus.SetActive(false);
+        AngusFocus.SetActive(false);
     }
 }
