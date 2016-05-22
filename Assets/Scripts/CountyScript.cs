@@ -23,7 +23,7 @@ public class CountyScript : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        Lua.RegisterFunction(this.gameObject.name + "CountyConversationCleanUp", this, typeof(CountyScript).GetMethod("OnMouseDown"));
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class CountyScript : MonoBehaviour {
     }
 
 
-    void OnMouseDown() {
+    public void OnMouseDown() {
         DisableButtons();
         unFocus();
 

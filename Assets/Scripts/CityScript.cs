@@ -50,6 +50,7 @@ public class CityScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Lua.RegisterFunction(this.gameObject.name + "CityConversationCleanUp", this, typeof(CityScript).GetMethod("OnMouseDown"));
     }
 
     // Update is called once per frame
@@ -58,7 +59,7 @@ public class CityScript : MonoBehaviour
 
     }
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         DisableButtons();
         unFocus();

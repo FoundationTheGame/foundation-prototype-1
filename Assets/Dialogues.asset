@@ -1059,7 +1059,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 191.3699
+        x: 192.63574
         y: 167.21951
         width: 160
         height: 30
@@ -1282,7 +1282,7 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: Actor["Balthazar"].KnowsPlayer == false
+      conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4454,7 +4454,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1755.1869
@@ -5244,7 +5244,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 810.8992
@@ -5448,7 +5448,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 356.40305
@@ -5510,10 +5510,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 2307.4783
+        x: 2308.5771
         y: 313.23666
         width: 160
         height: 30
@@ -7804,7 +7804,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 3037.5593
@@ -8591,10 +8591,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DundeeCityConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 89.5125
+        x: 88.19672
         y: 292.87494
         width: 160
         height: 30
@@ -8662,7 +8662,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 30.74865
+        x: 32.064445
         y: 415.15878
         width: 160
         height: 30
@@ -10428,7 +10428,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DundeeCityConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 525.71045
@@ -10964,7 +10964,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 43
+        destinationConversationID: 2
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= 500
       userScript: 'Variable["Money"] = Variable["Money"] - 500;
 
@@ -11031,7 +11037,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 44
+        destinationConversationID: 2
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= 1000
       userScript: 'Variable["Money"] = Variable["Money"] - 1000;
 
@@ -11098,7 +11110,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 45
+        destinationConversationID: 2
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= 2000
       userScript: 'Variable["Money"] = Variable["Money"] - 2000;
 
@@ -11165,7 +11183,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 46
+        destinationConversationID: 2
+        destinationDialogueID: 75
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] >= 5000
       userScript: 'Variable["Money"] = Variable["Money"] - 5000;
 
@@ -13052,7 +13076,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DundeeCityConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 902.7989
@@ -13252,7 +13276,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: DundeeCityConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1677.0265
@@ -14627,7 +14651,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 139.22893
@@ -14689,7 +14713,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 370.2057
@@ -15315,7 +15339,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 593.4644
@@ -15996,7 +16020,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1103.2167
@@ -17790,7 +17814,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1553.7935
@@ -18852,7 +18876,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1222.9374
@@ -21228,7 +21252,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 2942.2717
@@ -22077,7 +22101,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 2494.275
@@ -22207,7 +22231,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 1622.8945
