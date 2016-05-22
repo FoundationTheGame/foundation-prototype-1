@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour {
 	private Text dateText;
 	private float timer = 5.0f;
 	private int increment = 0;
+	private int daysPassed = 0;
 
 	private int money;
 	private float reputation;
@@ -61,9 +62,18 @@ public class PlayerScript : MonoBehaviour {
 		date = date.AddDays(1);
 		dateText.text = date.ToString("d MMM yyyy");
 		updateTimespeed(0);
+		daysPassed++;
+		if (daysPassed == 7){
+		print("A week has passed");
+		weeklyUpdate();
+		daysPassed = 0;
+		}
 		}
 
 
+	}
+
+	public void weeklyUpdate(){
 	}
 
 	public void updateTimespeed (int inc) {
