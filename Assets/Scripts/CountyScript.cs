@@ -11,6 +11,11 @@ public class CountyScript : MonoBehaviour {
     public GameObject option2;
     public GameObject option3;
     public GameObject option4;
+    public GameObject DundeeFocus;
+    public GameObject AmbersmithFocus;
+    public GameObject AngusFocus;
+    public GameObject GuthrieFocus;
+    public GameObject focused;
 
     private Text countyNameText;
     private Text cityNameText;
@@ -29,6 +34,7 @@ public class CountyScript : MonoBehaviour {
 
     void OnMouseDown() {
         DisableButtons();
+        unFocus();
 
         countyNameText = countyName.GetComponent<Text>();
         cityNameText = cityName.GetComponent<Text>();
@@ -49,6 +55,8 @@ public class CountyScript : MonoBehaviour {
             option4.SetActive(true);
         });
         option1.SetActive(true);
+        focused.SetActive(true);
+
     }
 
     void DisableButtons() {
@@ -60,6 +68,14 @@ public class CountyScript : MonoBehaviour {
         option3.GetComponent<Button>().onClick.RemoveAllListeners();
         option4.SetActive(false);
         option4.GetComponent<Button>().onClick.RemoveAllListeners();
+    }
+
+    void unFocus()
+    {
+        DundeeFocus.SetActive(false);
+        AmbersmithFocus.SetActive(false);
+        GuthrieFocus.SetActive(false);
+        AngusFocus.SetActive(false);
     }
 
 }
