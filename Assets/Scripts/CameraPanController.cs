@@ -5,7 +5,7 @@ public class CameraPanController : MonoBehaviour
 {
     int theScreenWidth;
     int theScreenHeight;
-    public int Boundary = 50;
+    public int Boundary = 30;
     public int speed = 5;
     void Start()
     {
@@ -21,7 +21,7 @@ public class CameraPanController : MonoBehaviour
         transform.Translate(new Vector3(xAxisValue * speed, 0.0f, zAxisValue * speed));
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, 200, 850), 100, Mathf.Clamp(transform.position.z, 150, 800));
 
-
+/*
         if (Input.mousePosition.x > theScreenWidth - Boundary)
         {
             //transform.position.x += speed * Time.deltaTime; // move on +X axis
@@ -41,7 +41,7 @@ public class CameraPanController : MonoBehaviour
         {
             //transform.position.z -= speed * Time.deltaTime; // move on -Z axis
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed * Time.deltaTime * 20);
-        }
+        }*/
     }
 
     void OnGUI()
