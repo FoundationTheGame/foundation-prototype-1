@@ -433,11 +433,11 @@ MonoBehaviour:
       value: 221
       type: 1
       typeString: CustomFieldType_Number
-    - title: Iron Ore
+    - title: IronOre
       value: 150
       type: 1
       typeString: CustomFieldType_Number
-    - title: Gold Ore
+    - title: GoldOre
       value: 15
       type: 1
       typeString: CustomFieldType_Number
