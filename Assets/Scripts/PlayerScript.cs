@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour {
 	private int increment = 0;
 	private int daysPassed = 0;
 
-	public int money;
+	public float money;
 	public float reputation;
 	public float influence;
 	public DateTime date;
@@ -64,7 +64,6 @@ public class PlayerScript : MonoBehaviour {
 		updateTimespeed(0);
 		daysPassed++;
 		if (daysPassed == 7){
-		print("A week has passed");
 		weeklyUpdate();
 		daysPassed = 0;
 		}

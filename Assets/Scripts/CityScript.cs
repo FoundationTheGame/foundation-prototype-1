@@ -86,20 +86,20 @@ public class CityScript : MonoBehaviour
     public GameObject storedClothes;
 	public GameObject storedAle;
 
-	public GameObject inputFish;
-    public GameObject inputMeat;
-    public GameObject inputCereals;
-    public GameObject inputIronOre;
-    public GameObject inputGoldOre;
-    public GameObject inputWood;
-    public GameObject inputWool;
-    public GameObject inputBread;
-    public GameObject inputTools;
-    public GameObject inputWeapons;
-    public GameObject inputJewelry;
-    public GameObject inputFurniture;
-    public GameObject inputClothes;
-	public GameObject inputAle;
+	public InputField inputFish;
+    public InputField inputMeat;
+    public InputField inputCereals;
+    public InputField inputIronOre;
+    public InputField inputGoldOre;
+    public InputField inputWood;
+    public InputField inputWool;
+    public InputField inputBread;
+    public InputField inputTools;
+    public InputField inputWeapons;
+    public InputField inputJewelry;
+    public InputField inputFurniture;
+    public InputField inputClothes;
+	public InputField inputAle;
 
     private Text countyNameText;
     private Text cityNameText;
@@ -323,20 +323,20 @@ public class CityScript : MonoBehaviour
 
 	void updateBuy(){
 	
-		int fish = int.TryParse(inputFish.GetComponent<Text>());
-		int meat = Convert.ToInt32(inputMeat.GetComponent<Text>().text);
-		int cereals = Convert.ToInt32(inputCereals.GetComponent<Text>().text);
-		int ironOre = Convert.ToInt32(inputIronOre.GetComponent<Text>().text);
-		int goldOre = Convert.ToInt32(inputGoldOre.GetComponent<Text>().text);
-		int wood = Convert.ToInt32(inputWood.GetComponent<Text>().text);
-		int wool = Convert.ToInt32(inputWool.GetComponent<Text>().text);
-		int bread = Convert.ToInt32(inputBread.GetComponent<Text>().text);
-		int ale = Convert.ToInt32(inputAle.GetComponent<Text>().text);
-		int tools = Convert.ToInt32(inputTools.GetComponent<Text>().text);
-		int weapons = Convert.ToInt32(inputWeapons.GetComponent<Text>().text);
-		int jewelry = Convert.ToInt32(inputJewelry.GetComponent<Text>().text);
-		int furniture = Convert.ToInt32(inputFurniture.GetComponent<Text>().text);
-		int clothes = Convert.ToInt32(inputClothes.GetComponent<Text>().text);
+		int fish = Convert.ToInt32(inputFish.text);
+		int meat = Convert.ToInt32(inputMeat.text);
+		int cereals = Convert.ToInt32(inputCereals.text);
+		int ironOre = Convert.ToInt32(inputIronOre.text);
+		int goldOre = Convert.ToInt32(inputGoldOre.text);
+		int wood = Convert.ToInt32(inputWood.text);
+		int wool = Convert.ToInt32(inputWool.text);
+		int bread = Convert.ToInt32(inputBread.text);
+		int ale = Convert.ToInt32(inputAle.text);
+		int tools = Convert.ToInt32(inputTools.text);
+		int weapons = Convert.ToInt32(inputWeapons.text);
+		int jewelry = Convert.ToInt32(inputJewelry.text);
+		int furniture = Convert.ToInt32(inputFurniture.text);
+		int clothes = Convert.ToInt32(inputClothes.text);
 
         int fishPrice = DialogueLua.GetLocationField("Dundee", "FishPrice").AsInt;
         int meatPrice = DialogueLua.GetLocationField("Dundee", "MeatPrice").AsInt;
@@ -353,12 +353,52 @@ public class CityScript : MonoBehaviour
         int furniturePrice = DialogueLua.GetLocationField("Dundee", "FurniturePrice").AsInt;
         int clothesPrice = DialogueLua.GetLocationField("Dundee", "ClothesPrice").AsInt;
 
-		PlayerScript player = GetComponent<PlayerScript>();
-		//float totalPrice = fish*fishPrice + meat*meatPrice + cereals*cerealsPrice + ironOre*ironOrePrice + goldOre*goldOrePrice + wood*woodPrice + wool*woolPrice + bread*breadPrice + ale*alePrice + tools*toolsPrice + weapons*weaponsPrice + jewelry*jewelryPrice + furniture*furniturePrice + clothes*clothesPrice;
-		//if(totalPrice > player.money){
-		//Debug.Log(totalPrice);
-		//}
+		
+
+		float playerMoney = DialogueLua.GetVariable("Money").AsInt;
+		float totalPrice = fish*fishPrice + meat*meatPrice + cereals*cerealsPrice + ironOre*ironOrePrice + goldOre*goldOrePrice + wood*woodPrice + wool*woolPrice + bread*breadPrice + ale*alePrice + tools*toolsPrice + weapons*weaponsPrice + jewelry*jewelryPrice + furniture*furniturePrice + clothes*clothesPrice;
+		int total = fish + meat + cereals + ironOre + goldOre + wood + wool + bread + ale + tools + weapons + jewelry + furniture + clothes;
+		//int warehouseTotal = warehouseTotal();
+
+		if(!(totalPrice > playerMoney)){
+			DialogueLua.SetVariable("Money", playerMoney-totalPrice);
+			DialogueLua.SetLocationField("DundeeWarehouse", "Fish", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt + fish));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Meat", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt + meat));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Cereal", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + cereals));
+			DialogueLua.SetLocationField("DundeeWarehouse", "IronOre", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt + ironOre));
+			DialogueLua.SetLocationField("DundeeWarehouse", "GoldOre", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt + goldOre));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Wood", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt + wood));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Wool", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt + wool));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Bread", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt + bread));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Ale", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt + ale));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Tools", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt + tools));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Weapons", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt + weapons));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Jewelry", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt + jewelry));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Furniture", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt + furniture));
+			DialogueLua.SetLocationField("DundeeWarehouse", "Clothes", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt + clothes));
+
+			resetInputFields();
+			
+		}
+		
 	
+	}
+
+	void resetInputFields(){
+		inputFish.text = ""+0;
+			inputMeat.text = ""+0;
+			inputCereals.text = ""+0;
+			inputIronOre.text = ""+0;
+			inputGoldOre.text = ""+0;
+			inputWood.text = ""+0;
+			inputWool.text = ""+0;
+			inputBread.text = ""+0;
+			inputAle.text = ""+0;
+			inputTools.text = ""+0;
+			inputWeapons.text = ""+0;
+			inputJewelry.text = ""+0;
+			inputFurniture.text = ""+0;
+			inputClothes.text = ""+0;
 	}
 
 	void getWarehouseGoods(){
