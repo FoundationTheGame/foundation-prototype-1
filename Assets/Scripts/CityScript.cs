@@ -353,15 +353,56 @@ public class CityScript : MonoBehaviour
         int furniturePrice = DialogueLua.GetLocationField("Dundee", "FurniturePrice").AsInt;
         int clothesPrice = DialogueLua.GetLocationField("Dundee", "ClothesPrice").AsInt;
 
-		
-
 		float playerMoney = DialogueLua.GetVariable("Money").AsInt;
 		float totalPrice = fish*fishPrice + meat*meatPrice + cereals*cerealsPrice + ironOre*ironOrePrice + goldOre*goldOrePrice + wood*woodPrice + wool*woolPrice + bread*breadPrice + ale*alePrice + tools*toolsPrice + weapons*weaponsPrice + jewelry*jewelryPrice + furniture*furniturePrice + clothes*clothesPrice;
 		int total = fish + meat + cereals + ironOre + goldOre + wood + wool + bread + ale + tools + weapons + jewelry + furniture + clothes;
-		//int warehouseTotal = warehouseTotal();
+		int warehousetotal = warehouseTotal();
+		int warehousecapacity = warehouseCapacity();
 
-		if(!(totalPrice > playerMoney)){
+		bool markethasgoods = true; 
+		if(	((DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt - fish)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt + meat)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + cereals)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt + ironOre)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt + goldOre)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt + wood)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt + wool)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt + bread)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt + ale)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt + tools)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt + weapons)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt + jewelry)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt + furniture)< 0) ||
+			((DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt + clothes)< 0))
+			markethasgoods = false;
+
+		//Purchase can be done
+		if(totalPrice > playerMoney){
+			print("Insufficient funds");
+		}
+		else if (warehousetotal+total > warehousecapacity){
+			print("Warehouse full");
+		}
+		else if (!markethasgoods){
+			print("Insufficient goods");
+		} 
+		else{
 			DialogueLua.SetVariable("Money", playerMoney-totalPrice);
+			DialogueLua.SetLocationField("Dundee", "Fish", ""+(DialogueLua.GetLocationField("Dundee", "Fish").AsInt - fish));
+			DialogueLua.SetLocationField("Dundee", "Meat", ""+(DialogueLua.GetLocationField("Dundee", "Meat").AsInt - meat));
+			DialogueLua.SetLocationField("Dundee", "Cereal", ""+(DialogueLua.GetLocationField("Dundee", "Cereal").AsInt - cereals));
+			DialogueLua.SetLocationField("Dundee", "IronOre", ""+(DialogueLua.GetLocationField("Dundee", "IronOre").AsInt - ironOre));
+			DialogueLua.SetLocationField("Dundee", "GoldOre", ""+(DialogueLua.GetLocationField("Dundee", "GoldOre").AsInt - goldOre));
+			DialogueLua.SetLocationField("Dundee", "Wood", ""+(DialogueLua.GetLocationField("Dundee", "Wood").AsInt - wood));
+			DialogueLua.SetLocationField("Dundee", "Wool", ""+(DialogueLua.GetLocationField("Dundee", "Wool").AsInt - wool));
+			DialogueLua.SetLocationField("Dundee", "Bread", ""+(DialogueLua.GetLocationField("Dundee", "Bread").AsInt - bread));
+			DialogueLua.SetLocationField("Dundee", "Ale", ""+(DialogueLua.GetLocationField("Dundee", "Ale").AsInt - ale));
+			DialogueLua.SetLocationField("Dundee", "Tools", ""+(DialogueLua.GetLocationField("Dundee", "Tools").AsInt - tools));
+			DialogueLua.SetLocationField("Dundee", "Weapons", ""+(DialogueLua.GetLocationField("Dundee", "Weapons").AsInt - weapons));
+			DialogueLua.SetLocationField("Dundee", "Jewelry", ""+(DialogueLua.GetLocationField("Dundee", "Jewelry").AsInt - jewelry));
+			DialogueLua.SetLocationField("Dundee", "Furniture", ""+(DialogueLua.GetLocationField("Dundee", "Furniture").AsInt - furniture));
+			DialogueLua.SetLocationField("Dundee", "Clothes", ""+(DialogueLua.GetLocationField("Dundee", "Clothes").AsInt - clothes));
+
 			DialogueLua.SetLocationField("DundeeWarehouse", "Fish", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt + fish));
 			DialogueLua.SetLocationField("DundeeWarehouse", "Meat", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt + meat));
 			DialogueLua.SetLocationField("DundeeWarehouse", "Cereal", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + cereals));
@@ -377,11 +418,36 @@ public class CityScript : MonoBehaviour
 			DialogueLua.SetLocationField("DundeeWarehouse", "Furniture", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt + furniture));
 			DialogueLua.SetLocationField("DundeeWarehouse", "Clothes", ""+(DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt + clothes));
 
+			getMarketStored();
+			getMarketPrices();
+			getMarketStock();
 			resetInputFields();
 			
 		}
 		
+	}
+
+	int warehouseCapacity(){
+	return (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*100;
+	}
+
+	int warehouseTotal(){
 	
+	return (DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt+
+	DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt);
+
 	}
 
 	void resetInputFields(){
@@ -407,7 +473,7 @@ public class CityScript : MonoBehaviour
             warehouseMaterialText = warehouseMeat.GetComponent<Text>();
             warehouseMaterialText.text = "Meat: " + DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt;
             warehouseMaterialText = warehouseCereals.GetComponent<Text>();
-            warehouseMaterialText.text = "Cereals: " + DialogueLua.GetLocationField("DundeeWarehouse", "Cereals").AsInt;
+            warehouseMaterialText.text = "Cereals: " + DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt;
             warehouseMaterialText = warehouseIronOre.GetComponent<Text>();
             warehouseMaterialText.text = "Iron Ore: " + DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt;
             warehouseMaterialText = warehouseGoldOre.GetComponent<Text>();
@@ -432,7 +498,7 @@ public class CityScript : MonoBehaviour
             warehouseMaterialText.text = "Clothes: " + DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
            
 		    warehouseMaterialText = warehouseLevel.GetComponent<Text>();
-            warehouseMaterialText.text = "Level: " + DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt + " (Max Capacity " + (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*100 + " units)";
+            warehouseMaterialText.text = "Level: " + DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt + " (Max Capacity " +  warehouseCapacity() + " units)";
 
 	
 	}
