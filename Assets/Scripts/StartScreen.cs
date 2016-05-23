@@ -18,6 +18,5 @@ public class StartScreen : MonoBehaviour {
     {
 
         SceneManager.LoadScene("game-scene");
-        
     }
 }
