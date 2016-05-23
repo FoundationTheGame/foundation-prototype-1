@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using PixelCrushers.DialogueSystem;
+using System;
 
 public class CityScript : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CityScript : MonoBehaviour
     public GameObject option2;
     public GameObject option3;
     public GameObject option4;
+	public GameObject buyButton;
+	public GameObject sellButton;
     public GameObject DundeeFocus;
     public GameObject AmbersmithFocus;
     public GameObject AngusFocus;
@@ -83,15 +86,25 @@ public class CityScript : MonoBehaviour
     public GameObject storedClothes;
 	public GameObject storedAle;
 
+	public GameObject inputFish;
+    public GameObject inputMeat;
+    public GameObject inputCereals;
+    public GameObject inputIronOre;
+    public GameObject inputGoldOre;
+    public GameObject inputWood;
+    public GameObject inputWool;
+    public GameObject inputBread;
+    public GameObject inputTools;
+    public GameObject inputWeapons;
+    public GameObject inputJewelry;
+    public GameObject inputFurniture;
+    public GameObject inputClothes;
+	public GameObject inputAle;
+
     private Text countyNameText;
     private Text cityNameText;
     private Text warehouseMaterialText;
 	private Text marketStoredText;
-
-
-    public int units = 0;
-    public int type;
-    public double unit_price; 
 
     // Use this for initialization
     void Start()
@@ -149,6 +162,16 @@ public class CityScript : MonoBehaviour
 		getMarketStored();
 		getMarketPrices();
 		getMarketStock();
+
+		buyButton.GetComponent<Button>().onClick.AddListener(() =>
+        {
+		updateBuy();
+		});
+
+		sellButton.GetComponent<Button>().onClick.AddListener(() =>
+        { 
+		//updateSell();
+		});
 		
 		option4.GetComponentInChildren<Text>().text = "Leave Marketplace";
             option4.GetComponent<Button>().onClick.AddListener(() => {
@@ -173,37 +196,7 @@ public class CityScript : MonoBehaviour
             warehousePanel.GetComponentInChildren<Text>().text = "Warehouse";
             DisableButtons();
 
-            warehouseMaterialText = warehouseFish.GetComponent<Text>();
-            warehouseMaterialText.text = "Fish: " + DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt;
-            warehouseMaterialText = warehouseMeat.GetComponent<Text>();
-            warehouseMaterialText.text = "Meat: " + DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt;
-            warehouseMaterialText = warehouseCereals.GetComponent<Text>();
-            warehouseMaterialText.text = "Cereals: " + DialogueLua.GetLocationField("DundeeWarehouse", "Cereals").AsInt;
-            warehouseMaterialText = warehouseIronOre.GetComponent<Text>();
-            warehouseMaterialText.text = "Iron Ore: " + DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt;
-            warehouseMaterialText = warehouseGoldOre.GetComponent<Text>();
-            warehouseMaterialText.text = "Gold Ore: " + DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt;
-            warehouseMaterialText = warehouseWood.GetComponent<Text>();
-            warehouseMaterialText.text = "Wood: " + DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt;
-            warehouseMaterialText = warehouseWool.GetComponent<Text>();
-            warehouseMaterialText.text = "Wool: " + DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt;
-            warehouseMaterialText = warehouseBread.GetComponent<Text>();
-            warehouseMaterialText.text = "Bread: " + DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt;
-            warehouseMaterialText = warehouseAle.GetComponent<Text>();
-            warehouseMaterialText.text = "Ale: " + DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt;
-            warehouseMaterialText = warehouseTools.GetComponent<Text>();
-            warehouseMaterialText.text = "Tools: " + DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt;
-            warehouseMaterialText = warehouseWeapons.GetComponent<Text>();
-            warehouseMaterialText.text = "Weapons: " + DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt;
-            warehouseMaterialText = warehouseJewelry.GetComponent<Text>();
-            warehouseMaterialText.text = "Jewelry: " + DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt;
-            warehouseMaterialText = warehouseFurniture.GetComponent<Text>();
-            warehouseMaterialText.text = "Furniture: " + DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt;
-            warehouseMaterialText = warehouseClothes.GetComponent<Text>();
-            warehouseMaterialText.text = "Clothes: " + DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
-           
-		    warehouseMaterialText = warehouseLevel.GetComponent<Text>();
-            warehouseMaterialText.text = "Level: " + DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt + " (Max Capacity " + (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*100 + " units)";
+			getWarehouseGoods();
 
             option4.GetComponentInChildren<Text>().text = "Leave Warehouse";
             option4.GetComponent<Button>().onClick.AddListener(() => {
@@ -328,4 +321,79 @@ public class CityScript : MonoBehaviour
         marketStoredText.text = ""+DialogueLua.GetLocationField("Dundee", "Clothes").AsInt;
 	}
 
+	void updateBuy(){
+	
+		int fish = int.TryParse(inputFish.GetComponent<Text>());
+		int meat = Convert.ToInt32(inputMeat.GetComponent<Text>().text);
+		int cereals = Convert.ToInt32(inputCereals.GetComponent<Text>().text);
+		int ironOre = Convert.ToInt32(inputIronOre.GetComponent<Text>().text);
+		int goldOre = Convert.ToInt32(inputGoldOre.GetComponent<Text>().text);
+		int wood = Convert.ToInt32(inputWood.GetComponent<Text>().text);
+		int wool = Convert.ToInt32(inputWool.GetComponent<Text>().text);
+		int bread = Convert.ToInt32(inputBread.GetComponent<Text>().text);
+		int ale = Convert.ToInt32(inputAle.GetComponent<Text>().text);
+		int tools = Convert.ToInt32(inputTools.GetComponent<Text>().text);
+		int weapons = Convert.ToInt32(inputWeapons.GetComponent<Text>().text);
+		int jewelry = Convert.ToInt32(inputJewelry.GetComponent<Text>().text);
+		int furniture = Convert.ToInt32(inputFurniture.GetComponent<Text>().text);
+		int clothes = Convert.ToInt32(inputClothes.GetComponent<Text>().text);
+
+        int fishPrice = DialogueLua.GetLocationField("Dundee", "FishPrice").AsInt;
+        int meatPrice = DialogueLua.GetLocationField("Dundee", "MeatPrice").AsInt;
+        int cerealsPrice = DialogueLua.GetLocationField("Dundee", "CerealPrice").AsInt;
+        int ironOrePrice = DialogueLua.GetLocationField("Dundee", "IronOrePrice").AsInt;
+        int goldOrePrice = DialogueLua.GetLocationField("Dundee", "GoldOrePrice").AsInt;
+        int woodPrice = DialogueLua.GetLocationField("Dundee", "WoodPrice").AsInt;
+        int woolPrice = DialogueLua.GetLocationField("Dundee", "WoolPrice").AsInt;
+        int breadPrice = DialogueLua.GetLocationField("Dundee", "BreadPrice").AsInt;
+        int alePrice = DialogueLua.GetLocationField("Dundee", "AlePrice").AsInt;
+        int toolsPrice = DialogueLua.GetLocationField("Dundee", "ToolsPrice").AsInt;
+        int weaponsPrice = DialogueLua.GetLocationField("Dundee", "WeaponsPrice").AsInt;
+        int jewelryPrice = DialogueLua.GetLocationField("Dundee", "JewelryPrice").AsInt;
+        int furniturePrice = DialogueLua.GetLocationField("Dundee", "FurniturePrice").AsInt;
+        int clothesPrice = DialogueLua.GetLocationField("Dundee", "ClothesPrice").AsInt;
+
+		PlayerScript player = GetComponent<PlayerScript>();
+		//float totalPrice = fish*fishPrice + meat*meatPrice + cereals*cerealsPrice + ironOre*ironOrePrice + goldOre*goldOrePrice + wood*woodPrice + wool*woolPrice + bread*breadPrice + ale*alePrice + tools*toolsPrice + weapons*weaponsPrice + jewelry*jewelryPrice + furniture*furniturePrice + clothes*clothesPrice;
+		//if(totalPrice > player.money){
+		//Debug.Log(totalPrice);
+		//}
+	
+	}
+
+	void getWarehouseGoods(){
+            warehouseMaterialText = warehouseFish.GetComponent<Text>();
+            warehouseMaterialText.text = "Fish: " + DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt;
+            warehouseMaterialText = warehouseMeat.GetComponent<Text>();
+            warehouseMaterialText.text = "Meat: " + DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt;
+            warehouseMaterialText = warehouseCereals.GetComponent<Text>();
+            warehouseMaterialText.text = "Cereals: " + DialogueLua.GetLocationField("DundeeWarehouse", "Cereals").AsInt;
+            warehouseMaterialText = warehouseIronOre.GetComponent<Text>();
+            warehouseMaterialText.text = "Iron Ore: " + DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt;
+            warehouseMaterialText = warehouseGoldOre.GetComponent<Text>();
+            warehouseMaterialText.text = "Gold Ore: " + DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt;
+            warehouseMaterialText = warehouseWood.GetComponent<Text>();
+            warehouseMaterialText.text = "Wood: " + DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt;
+            warehouseMaterialText = warehouseWool.GetComponent<Text>();
+            warehouseMaterialText.text = "Wool: " + DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt;
+            warehouseMaterialText = warehouseBread.GetComponent<Text>();
+            warehouseMaterialText.text = "Bread: " + DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt;
+            warehouseMaterialText = warehouseAle.GetComponent<Text>();
+            warehouseMaterialText.text = "Ale: " + DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt;
+            warehouseMaterialText = warehouseTools.GetComponent<Text>();
+            warehouseMaterialText.text = "Tools: " + DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt;
+            warehouseMaterialText = warehouseWeapons.GetComponent<Text>();
+            warehouseMaterialText.text = "Weapons: " + DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt;
+            warehouseMaterialText = warehouseJewelry.GetComponent<Text>();
+            warehouseMaterialText.text = "Jewelry: " + DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt;
+            warehouseMaterialText = warehouseFurniture.GetComponent<Text>();
+            warehouseMaterialText.text = "Furniture: " + DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt;
+            warehouseMaterialText = warehouseClothes.GetComponent<Text>();
+            warehouseMaterialText.text = "Clothes: " + DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt;
+           
+		    warehouseMaterialText = warehouseLevel.GetComponent<Text>();
+            warehouseMaterialText.text = "Level: " + DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt + " (Max Capacity " + (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*100 + " units)";
+
+	
+	}
 }

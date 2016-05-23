@@ -18,10 +18,10 @@ public class PlayerScript : MonoBehaviour {
 	private int increment = 0;
 	private int daysPassed = 0;
 
-	private int money;
-	private float reputation;
-	private float influence;
-	private DateTime date;
+	public int money;
+	public float reputation;
+	public float influence;
+	public DateTime date;
 
 
 	// Use this for initialization
