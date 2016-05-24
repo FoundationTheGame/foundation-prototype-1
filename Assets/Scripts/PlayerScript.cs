@@ -337,11 +337,11 @@
 		timer = 1000000f;
 		weeklyReport.SetActive(true);
 		if(DialogueLua.GetLocationField("Ambersmith","HasDeal").AsBool)
-		AmbersmithReport.GetComponent<Text>().text = "Ambersmith is producing "+ DialogueLua.GetLocationField("Ambersmith","DealQuantity").AsString +" wood for "+ DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Ambersmith","DealPrice").AsString + ").";
+		AmbersmithReport.GetComponent<Text>().text = "Ambersmith produced "+ DialogueLua.GetLocationField("Ambersmith","DealQuantity").AsString +" wood for "+ DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Ambersmith","DealPrice").AsString + ").";
 		if(DialogueLua.GetLocationField("Guthrie","HasDeal").AsBool)
-		GuthrieReport.GetComponent<Text>().text = "Guthrie is producing "+ DialogueLua.GetLocationField("Guthrie","DealQuantity").AsString +" cereals for "+ DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Guthrie","DealPrice").AsString + ").";
+		GuthrieReport.GetComponent<Text>().text = "Guthrie produced "+ DialogueLua.GetLocationField("Guthrie","DealQuantity").AsString +" cereals for "+ DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Guthrie","DealPrice").AsString + ").";
 		if(DialogueLua.GetLocationField("Angus","HasDeal").AsBool)
-		AngusReport.GetComponent<Text>().text = "Angus is producing "+ DialogueLua.GetLocationField("Angus","DealQuantity").AsString +" iron ore for "+ DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Angus","DealPrice").AsString + ").";
+		AngusReport.GetComponent<Text>().text = "Angus produced "+ DialogueLua.GetLocationField("Angus","DealQuantity").AsString +" iron ore for "+ DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Angus","DealPrice").AsString + ").";
 		
 		Income.GetComponent<Text>().text = "Income :"+ DialogueLua.GetVariable("Income").AsString;
 		Expenses.GetComponent<Text>().text = "Expenses :"+ DialogueLua.GetVariable("Expenses").AsString;
