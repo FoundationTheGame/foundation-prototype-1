@@ -193,7 +193,7 @@ public class CityScript : MonoBehaviour
         {
 
             warehousePanel.SetActive(true);
-            warehousePanel.GetComponentInChildren<Text>().text = "Warehouse";
+            warehousePanel.GetComponentInChildren<Text>().text = "Warehouse of "+this.gameObject.name;
             DisableButtons();
 
 			getWarehouseGoods();
@@ -524,7 +524,7 @@ public class CityScript : MonoBehaviour
 	}
 
 	int warehouseCapacity(){
-	return (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*100;
+	return (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*1000;
 	}
 
 	int warehouseTotal(){

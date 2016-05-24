@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System;
-using PixelCrushers.DialogueSystem;
+﻿	using UnityEngine;
+	using UnityEngine.UI;
+	using System.Collections;
+	using System;
+	using PixelCrushers.DialogueSystem;
 
-public class PlayerScript : MonoBehaviour {
+	public class PlayerScript : MonoBehaviour {
 
 	public GameObject play2;
 	public GameObject play3;
@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour {
 	dateText = playerDate.GetComponent<Text>();
 	moneyText = playerMoney.GetComponent<Text>();
 
-	money = DialogueLua.GetVariable("Money").AsInt;
+	money = DialogueLua.GetVariable("Money").AsFloat;
 	reputation = DialogueLua.GetVariable("Reputation").AsFloat;
 	influence = DialogueLua.GetVariable("Influence").AsFloat;
 	
@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour {
 		dateText = playerDate.GetComponent<Text>();
 		moneyText = playerMoney.GetComponent<Text>();
 
-		money = DialogueLua.GetVariable("Money").AsInt;
+		money = DialogueLua.GetVariable("Money").AsFloat;
 		reputation = DialogueLua.GetVariable("Reputation").AsFloat;
 		influence = DialogueLua.GetVariable("Influence").AsFloat;
 	
@@ -73,6 +73,10 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	public void weeklyUpdate(){
+
+		updateCounties();
+		updateDeals();
+
 	}
 
 	public void updateTimespeed (int inc) {
@@ -113,7 +117,109 @@ public class PlayerScript : MonoBehaviour {
 				break;
 			
 		}
-
 		
 	}
-}
+
+	void updateCounties(){
+		
+			int wood = DialogueLua.GetLocationField("Ambersmith","Wood").AsInt;
+			int ironOre = DialogueLua.GetLocationField("Angus","IronOre").AsInt;
+			int cereal = DialogueLua.GetLocationField("Guthrie","Cereal").AsInt;
+
+			int woodWeek = DialogueLua.GetLocationField("Ambersmith","WeeklyProduction").AsInt;
+			int ironOreWeek = DialogueLua.GetLocationField("Angus","WeeklyProduction").AsInt;
+			int cerealWeek = DialogueLua.GetLocationField("Guthrie","WeeklyProduction").AsInt;
+
+			DialogueLua.SetLocationField("Dundee", "Wood", DialogueLua.GetLocationField("Dundee","Wood").AsInt + wood);
+			DialogueLua.SetLocationField("Dundee", "IronOre", DialogueLua.GetLocationField("Dundee","IronOre").AsInt + ironOre);
+			DialogueLua.SetLocationField("Dundee", "Cereal", DialogueLua.GetLocationField("Dundee","Cereal").AsInt + cereal);
+
+			DialogueLua.SetLocationField("Ambersmith","Wood",woodWeek);
+			DialogueLua.SetLocationField("Angus","IronOre",ironOreWeek);
+			DialogueLua.SetLocationField("Guthrie","Wood",cerealWeek);
+		}
+
+	void updateDeals(){
+		
+		bool AmbersmithHasDeal = DialogueLua.GetLocationField("Ambersmith","HasDeal").AsBool;
+		bool AngusHasDeal = DialogueLua.GetLocationField("Angus","HasDeal").AsBool;
+		bool GuthrieHasDeal = DialogueLua.GetLocationField("Guthrie","HasDeal").AsBool;
+
+		float AmbersmithDealPrice = DialogueLua.GetLocationField("Ambersmith","DealPrice").AsFloat;
+		float AngusDealPrice = DialogueLua.GetLocationField("Angus","DealPrice").AsFloat;
+		float GuthrieDealPrice = DialogueLua.GetLocationField("Guthrie","DealPrice").AsFloat;
+
+		int AmbersmithDealQuantity = DialogueLua.GetLocationField("Ambersmith","DealQuantity").AsInt;
+		int AngusDealQuantity = DialogueLua.GetLocationField("Angus","DealQuantity").AsInt;
+		int GuthrieDealQuantity = DialogueLua.GetLocationField("Gjuthrie","DealQuantity").AsInt;
+
+		int AmbersmithDealWeeks = DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt;
+		int AngusDealWeeks = DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt;
+		int GuthrieDealWeeks = DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt;
+
+		if(AmbersmithHasDeal && AmbersmithDealWeeks > 0){
+			if(AmbersmithDealPrice > money){
+				print("Not enough money to deal");
+			}
+			else if ((warehouseTotal()+AmbersmithDealQuantity > DialogueLua.GetLocationField("DundeeWarehouse","WarehouseLevel").AsInt*1000)){
+			print("Not enough space in warehouse");
+				}
+			else {
+			money = money - AmbersmithDealPrice;
+			DialogueLua.SetLocationField("DundeeWarehouse","Wood",DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt + AmbersmithDealQuantity);
+			DialogueLua.SetLocationField("Ambersmith","DealWeeksLeft",DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt - 1);
+			}
+		}
+
+		if(AngusHasDeal && AngusDealWeeks > 0){
+			if(AngusDealPrice > money){
+				print("Not enough money to deal");
+			}
+			else if ((warehouseTotal()+AngusDealQuantity > DialogueLua.GetLocationField("DundeeWarehouse","WarehouseLevel").AsInt*1000)){
+			print("Not enough space in warehouse");
+				}
+			else {
+			money = money - AngusDealPrice;
+			DialogueLua.SetLocationField("DundeeWarehouse","IronOre",DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt + AngusDealQuantity);
+			DialogueLua.SetLocationField("Angus","DealWeeksLeft",DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt - 1);
+			}
+		}
+
+		if(GuthrieHasDeal && GuthrieDealWeeks > 0){
+			if(GuthrieDealPrice > money){
+				print("Not enough money to deal");
+			}
+			else if ((warehouseTotal()+GuthrieDealQuantity > DialogueLua.GetLocationField("DundeeWarehouse","WarehouseLevel").AsInt*1000)){
+			print("Not enough space in warehouse");
+				}
+			else {
+			money = money - GuthrieDealPrice;
+			DialogueLua.SetLocationField("DundeeWarehouse","Cereal",DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + GuthrieDealQuantity);
+			DialogueLua.SetLocationField("Guthrie","DealWeeksLeft",DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt - 1);
+			}
+		}
+
+
+
+		}
+
+		int warehouseTotal(){
+	
+		return (DialogueLua.GetLocationField("DundeeWarehouse", "Fish").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Meat").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "GoldOre").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Wool").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Bread").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Ale").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Tools").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Weapons").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Jewelry").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Furniture").AsInt+
+			DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt);
+
+	}
+		
+		}
