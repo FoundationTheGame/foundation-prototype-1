@@ -387,6 +387,9 @@ public class CityScript : MonoBehaviour
 			print("Insufficient goods");
 		} 
 		else{
+
+			DialogueLua.SetVariable("Expenses",DialogueLua.GetVariable("Expenses").AsFloat+totalPrice);
+
 			DialogueLua.SetVariable("Money", playerMoney-totalPrice);
 			DialogueLua.SetLocationField("Dundee", "Fish", ""+(DialogueLua.GetLocationField("Dundee", "Fish").AsInt - fish));
 			DialogueLua.SetLocationField("Dundee", "Meat", ""+(DialogueLua.GetLocationField("Dundee", "Meat").AsInt - meat));
@@ -484,6 +487,8 @@ public class CityScript : MonoBehaviour
 			float totalPrice = fish*fishPrice + meat*meatPrice + cereals*cerealsPrice + ironOre*ironOrePrice + goldOre*goldOrePrice + wood*woodPrice + wool*woolPrice + bread*breadPrice + ale*alePrice + tools*toolsPrice + weapons*weaponsPrice + jewelry*jewelryPrice + furniture*furniturePrice + clothes*clothesPrice;
 			DialogueLua.SetVariable("Money", playerMoney+totalPrice);
 
+			DialogueLua.SetVariable("Income",DialogueLua.GetVariable("Income").AsFloat+totalPrice);
+
 			DialogueLua.SetLocationField("Dundee", "Fish", ""+(DialogueLua.GetLocationField("Dundee", "Fish").AsInt + fish));
 			DialogueLua.SetLocationField("Dundee", "Meat", ""+(DialogueLua.GetLocationField("Dundee", "Meat").AsInt + meat));
 			DialogueLua.SetLocationField("Dundee", "Cereal", ""+(DialogueLua.GetLocationField("Dundee", "Cereal").AsInt + cereals));
@@ -518,13 +523,12 @@ public class CityScript : MonoBehaviour
 			getMarketPrices();
 			getMarketStock();
 			resetInputFields();
-			
 		}
 		
 	}
 
 	int warehouseCapacity(){
-	return (DialogueLua.GetLocationField("DundeeWarehouse", "Level").AsInt+1)*1000;
+	return (DialogueLua.GetLocationField("DundeeWarehouse", "WarehouseLevel").AsInt)*1000;
 	}
 
 	int warehouseTotal(){
