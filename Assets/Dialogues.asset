@@ -670,7 +670,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Wood
-      value: 0
+      value: 990
       type: 1
       typeString: CustomFieldType_Number
     - title: Fish
@@ -682,11 +682,11 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Cereal
-      value: 0
+      value: 990
       type: 1
       typeString: CustomFieldType_Number
     - title: IronOre
-      value: 0
+      value: 990
       type: 1
       typeString: CustomFieldType_Number
     - title: GoldOre
@@ -2340,6 +2340,12 @@ MonoBehaviour:
         destinationDialogueID: 59
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 33
+        destinationConversationID: 1
+        destinationDialogueID: 148
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -2412,6 +2418,12 @@ MonoBehaviour:
         originDialogueID: 34
         destinationConversationID: 1
         destinationDialogueID: 61
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 34
+        destinationConversationID: 1
+        destinationDialogueID: 148
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2488,11 +2500,17 @@ MonoBehaviour:
         destinationDialogueID: 60
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 35
+        destinationConversationID: 1
+        destinationDialogueID: 148
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 3012.4932
+        x: 3013.759
         y: 317.71524
         width: 160
         height: 30
@@ -2560,6 +2578,12 @@ MonoBehaviour:
         originDialogueID: 36
         destinationConversationID: 1
         destinationDialogueID: 64
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 36
+        destinationConversationID: 1
+        destinationDialogueID: 146
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2636,6 +2660,12 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 37
+        destinationConversationID: 1
+        destinationDialogueID: 146
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -2710,6 +2740,12 @@ MonoBehaviour:
         destinationDialogueID: 62
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 38
+        destinationConversationID: 1
+        destinationDialogueID: 146
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -2771,8 +2807,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 39
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
@@ -2783,7 +2827,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 3196.7146
-        y: 279.38712
+        y: 280.65295
         width: 160
         height: 30
     - id: 40
@@ -2839,8 +2883,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
@@ -2907,8 +2959,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 41
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
@@ -2975,8 +3035,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 42
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
@@ -3043,8 +3111,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 43
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
@@ -3111,8 +3187,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1)
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 44
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
@@ -3260,6 +3344,12 @@ MonoBehaviour:
         destinationDialogueID: 73
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 46
+        destinationConversationID: 1
+        destinationDialogueID: 147
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -3332,6 +3422,12 @@ MonoBehaviour:
         originDialogueID: 47
         destinationConversationID: 1
         destinationDialogueID: 72
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 47
+        destinationConversationID: 1
+        destinationDialogueID: 147
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3476,6 +3572,12 @@ MonoBehaviour:
         destinationDialogueID: 75
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 49
+        destinationConversationID: 1
+        destinationDialogueID: 145
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -3548,6 +3650,12 @@ MonoBehaviour:
         originDialogueID: 50
         destinationConversationID: 1
         destinationDialogueID: 74
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 50
+        destinationConversationID: 1
+        destinationDialogueID: 145
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3692,7 +3800,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 59
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
       userScript: 
       canvasRect:
@@ -3754,7 +3868,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 60
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
@@ -3816,7 +3936,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 61
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
       userScript: 
       canvasRect:
@@ -3878,7 +4004,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 62
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
       userScript: 
       canvasRect:
@@ -3940,7 +4072,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 63
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
@@ -4002,7 +4140,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 64
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
       userScript: 
       canvasRect:
@@ -4071,7 +4215,9 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
@@ -4145,7 +4291,9 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
@@ -4219,7 +4367,9 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
@@ -4293,7 +4443,9 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
@@ -4843,6 +4995,12 @@ MonoBehaviour:
         destinationDialogueID: 92
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 86
+        destinationConversationID: 1
+        destinationDialogueID: 144
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -5121,6 +5279,12 @@ MonoBehaviour:
         destinationDialogueID: 96
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 90
+        destinationConversationID: 1
+        destinationDialogueID: 143
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -5189,7 +5353,9 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
@@ -5199,7 +5365,7 @@ MonoBehaviour:
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
         serializedVersion: 2
-        x: 735.0328
+        x: 736.2523
         y: 375.8076
         width: 160
         height: 30
@@ -5491,7 +5657,9 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*1);
@@ -6135,7 +6303,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1294.4862
+        x: 1295.7057
         y: 84.82669
         width: 160
         height: 30
@@ -6519,7 +6687,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You have been nice to me, so... Okay! What's your proposal?
+        value: You have been nice to me, but aren't there yet. Let's trade a bit more.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -6549,7 +6717,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 110
         destinationConversationID: 1
-        destinationDialogueID: 112
+        destinationDialogueID: 98
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6656,74 +6824,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 1468.7607
         y: 325.46518
-        width: 160
-        height: 30
-    - id: 112
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: IPLEMET DEALS
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 112
-        destinationConversationID: 1
-        destinationDialogueID: 98
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 2137.122
-        y: 413.88162
         width: 160
         height: 30
     - id: 113
@@ -7716,12 +7816,18 @@ MonoBehaviour:
         destinationDialogueID: 132
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 127
+        destinationConversationID: 1
+        destinationDialogueID: 134
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 3246.77
-        y: 161.36856
+        x: 2903.7322
+        y: 594.27985
         width: 160
         height: 30
     - id: 130
@@ -7921,12 +8027,30 @@ MonoBehaviour:
         destinationDialogueID: 133
         isConnector: 0
         priority: 2
-      conditionsString: 
+      - originConversationID: 1
+        originDialogueID: 132
+        destinationConversationID: 1
+        destinationDialogueID: 136
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 132
+        destinationConversationID: 1
+        destinationDialogueID: 137
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 132
+        destinationConversationID: 1
+        destinationDialogueID: 138
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Ambersmith"].HasDeal == false
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 3246.77
-        y: 211.36856
+        x: 2904.998
+        y: 692.3811
         width: 160
         height: 30
     - id: 133
@@ -7956,7 +8080,145 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[IMPLEMENT DEALS]'
+        value: '[lua((Location["Ambersmith"].WeeklyProduction))] wood per week for
+          [lua((Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction))]
+          gold per week during 5 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 133
+        destinationConversationID: 1
+        destinationDialogueID: 139
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2905.9138
+        y: 742.9974
+        width: 160
+        height: 30
+    - id: 134
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Don't you mock me! We already have a deal. Are you drunk?
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 134
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Ambersmith"].HasDeal == true
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2904.998
+        y: 644.27985
+        width: 160
+        height: 30
+    - id: 135
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave]'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7987,8 +8249,932 @@ MonoBehaviour:
       userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 3037.5593
-        y: 544.26324
+        x: 3579.3362
+        y: 378.42654
+        width: 160
+        height: 30
+    - id: 136
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Ambersmith"].WeeklyProduction*0.5))] wood per week
+          for [lua((Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction*0.5))]
+          gold per week during 5 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 136
+        destinationConversationID: 1
+        destinationDialogueID: 140
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2903.2556
+        y: 786.6683
+        width: 160
+        height: 30
+    - id: 137
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Ambersmith"].WeeklyProduction))] wood per week for
+          [lua((Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction))]
+          gold per week during 10 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 137
+        destinationConversationID: 1
+        destinationDialogueID: 141
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2904.5212
+        y: 828.44037
+        width: 160
+        height: 30
+    - id: 138
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Ambersmith"].WeeklyProduction*0.5))] wood per week
+          for [lua((Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction*0.5))]
+          gold per week during 10 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 138
+        destinationConversationID: 1
+        destinationDialogueID: 142
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2903.1292
+        y: 867.04803
+        width: 160
+        height: 30
+    - id: 139
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok. I'll go by your warehouse every week and I'll deliver the wood
+          upon payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 139
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Ambersmith"].HasDeal = true;
+
+        Location["Ambersmith"].DealPrice = (Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction);
+
+        Location["Ambersmith"].DealWeeksLeft = 5;
+
+        Location["Ambersmith"].DealQuantity = (Location["Ambersmith"].WeeklyProduction);'
+      canvasRect:
+        serializedVersion: 2
+        x: 3099.5847
+        y: 744.8961
+        width: 160
+        height: 30
+    - id: 140
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok. I'll go by your warehouse every week and I'll deliver the wood
+          upon payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 140
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Ambersmith"].HasDeal = true;
+
+        Location["Ambersmith"].DealPrice = (Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction*0.5);
+
+        Location["Ambersmith"].DealWeeksLeft = 5;
+
+        Location["Ambersmith"].DealQuantity = (Location["Ambersmith"].WeeklyProduction*0.5);'
+      canvasRect:
+        serializedVersion: 2
+        x: 3101.9897
+        y: 788.567
+        width: 160
+        height: 30
+    - id: 141
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok. I'll go by your warehouse every week and I'll deliver the wood
+          upon payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 141
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Ambersmith"].HasDeal = true;
+
+        Location["Ambersmith"].DealPrice = (Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction);
+
+        Location["Ambersmith"].DealWeeksLeft = 10;
+
+        Location["Ambersmith"].DealQuantity = (Location["Ambersmith"].WeeklyProduction);'
+      canvasRect:
+        serializedVersion: 2
+        x: 3100.7239
+        y: 827.8075
+        width: 160
+        height: 30
+    - id: 142
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok. I'll go by your warehouse every week and I'll deliver the wood
+          upon payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 142
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Ambersmith"].HasDeal = true;
+
+        Location["Ambersmith"].DealPrice = (Location["Dundee"].WoodPrice*0.8)*(Location["Ambersmith"].WeeklyProduction*0.5);
+
+        Location["Ambersmith"].DealWeeksLeft = 10;
+
+        Location["Ambersmith"].DealQuantity = (Location["Ambersmith"].WeeklyProduction*0.5);'
+      canvasRect:
+        serializedVersion: 2
+        x: 3100.5974
+        y: 866.4151
+        width: 160
+        height: 30
+    - id: 143
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 143
+        destinationConversationID: 1
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1078.2367
+        y: 480.56586
+        width: 160
+        height: 30
+    - id: 144
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 144
+        destinationConversationID: 1
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1084.5781
+        y: 370.8098
+        width: 160
+        height: 30
+    - id: 145
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 145
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2027.261
+        y: 589.1025
+        width: 160
+        height: 30
+    - id: 146
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 146
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 3579.9438
+        y: 435.44403
+        width: 160
+        height: 30
+    - id: 147
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 147
+        destinationConversationID: 1
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2018.9683
+        y: 483.005
+        width: 160
+        height: 30
+    - id: 148
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Well, there's no space in your warehouse...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 148
+        destinationConversationID: 1
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 3578.968
+        y: 297.63913
         width: 160
         height: 30
   - id: 2
@@ -14013,8 +15199,8 @@ MonoBehaviour:
         destinationDialogueID: 66
         isConnector: 0
         priority: 2
-      conditionsString: Actor["Edwin"].KnowsPlayer == true and ((Actor["Edwin"].PlayerReputation
-        >= 50) and (Actor["Edwin"].PlayerReputation < 75))
+      conditionsString: Actor["Edwin"].KnowsPlayer == true and ((Variable["Reputation"]
+        >= 50) and (Variable["Reputation"] < 75))
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -14094,7 +15280,7 @@ MonoBehaviour:
         destinationDialogueID: 85
         isConnector: 0
         priority: 2
-      conditionsString: (Actor["Edwin"].KnowsPlayer == true) and (Actor["Edwin"].PlayerReputation
+      conditionsString: (Actor["Edwin"].KnowsPlayer == true) and (Variable["Reputation"]
         >= 75)
       userScript: 
       canvasRect:
@@ -14755,6 +15941,12 @@ MonoBehaviour:
         destinationDialogueID: 47
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 12
+        destinationConversationID: 3
+        destinationDialogueID: 136
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -14959,7 +16151,9 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
@@ -16336,7 +17530,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
         x: 922.66486
@@ -16530,15 +17724,15 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 40
         destinationConversationID: 3
-        destinationDialogueID: 123
+        destinationDialogueID: 129
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1622.8945
-        y: 927.4113
+        x: 1492.5148
+        y: 905.89233
         width: 160
         height: 30
     - id: 41
@@ -16773,6 +17967,12 @@ MonoBehaviour:
         destinationDialogueID: 65
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 43
+        destinationConversationID: 3
+        destinationDialogueID: 138
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -16847,6 +18047,12 @@ MonoBehaviour:
         destinationDialogueID: 64
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 44
+        destinationConversationID: 3
+        destinationDialogueID: 138
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -16915,7 +18121,9 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
@@ -16990,7 +18198,9 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
@@ -17373,6 +18583,12 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 51
+        destinationConversationID: 3
+        destinationDialogueID: 137
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -17441,7 +18657,9 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
@@ -17739,6 +18957,12 @@ MonoBehaviour:
         destinationDialogueID: 61
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 56
+        destinationConversationID: 3
+        destinationDialogueID: 139
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -17813,6 +19037,12 @@ MonoBehaviour:
         destinationDialogueID: 59
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 57
+        destinationConversationID: 3
+        destinationDialogueID: 139
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -17881,7 +19111,9 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
@@ -18024,7 +19256,9 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
@@ -18263,8 +19497,8 @@ MonoBehaviour:
       userScript: AngusCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 1553.7935
-        y: 337.69043
+        x: 1546.4764
+        y: 341.34897
         width: 160
         height: 30
     - id: 64
@@ -19857,6 +21091,12 @@ MonoBehaviour:
         destinationDialogueID: 86
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 85
+        destinationConversationID: 3
+        destinationDialogueID: 131
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -19922,14 +21162,32 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 86
         destinationConversationID: 3
-        destinationDialogueID: 122
+        destinationDialogueID: 124
         isConnector: 0
         priority: 2
-      conditionsString: 
+      - originConversationID: 3
+        originDialogueID: 86
+        destinationConversationID: 3
+        destinationDialogueID: 126
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 86
+        destinationConversationID: 3
+        destinationDialogueID: 127
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 86
+        destinationConversationID: 3
+        destinationDialogueID: 128
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Guthrie"].HasDeal == false
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 2494.275
+        x: 2498.0725
         y: 533.4971
         width: 160
         height: 30
@@ -19997,6 +21255,12 @@ MonoBehaviour:
         originDialogueID: 87
         destinationConversationID: 3
         destinationDialogueID: 109
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 87
+        destinationConversationID: 3
+        destinationDialogueID: 141
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -20073,6 +21337,12 @@ MonoBehaviour:
         destinationDialogueID: 107
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 88
+        destinationConversationID: 3
+        destinationDialogueID: 141
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -20145,6 +21415,12 @@ MonoBehaviour:
         originDialogueID: 89
         destinationConversationID: 3
         destinationDialogueID: 106
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 89
+        destinationConversationID: 3
+        destinationDialogueID: 141
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -20221,6 +21497,12 @@ MonoBehaviour:
         destinationDialogueID: 103
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 90
+        destinationConversationID: 3
+        destinationDialogueID: 140
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -20295,6 +21577,12 @@ MonoBehaviour:
         destinationDialogueID: 101
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 91
+        destinationConversationID: 3
+        destinationDialogueID: 140
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -20367,6 +21655,12 @@ MonoBehaviour:
         originDialogueID: 92
         destinationConversationID: 3
         destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 92
+        destinationConversationID: 3
+        destinationDialogueID: 140
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -20845,7 +22139,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
@@ -20988,7 +22284,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
@@ -20999,7 +22297,7 @@ MonoBehaviour:
         + 25;'
       canvasRect:
         serializedVersion: 2
-        x: 2578.6704
+        x: 2577.451
         y: 387.0931
         width: 160
         height: 30
@@ -21131,7 +22429,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.8)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.8);
@@ -21274,7 +22574,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
@@ -21349,7 +22651,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
@@ -21360,7 +22664,7 @@ MonoBehaviour:
         + 10;'
       canvasRect:
         serializedVersion: 2
-        x: 2583.6704
+        x: 2584.89
         y: 227.88257
         width: 160
         height: 30
@@ -21560,7 +22864,9 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.8)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
@@ -22056,6 +23362,12 @@ MonoBehaviour:
         destinationDialogueID: 86
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 115
+        destinationConversationID: 3
+        destinationDialogueID: 131
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -22484,142 +23796,18 @@ MonoBehaviour:
         destinationDialogueID: 86
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 2165.7117
-        y: 841.45856
-        width: 160
-        height: 30
-    - id: 122
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 5
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[IMPLEMENT DEALS]'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: AngusCountyConversationCleanUp()
-      canvasRect:
-        serializedVersion: 2
-        x: 2494.275
-        y: 583.4971
-        width: 160
-        height: 30
-    - id: 123
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 5
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: If the coin is good enough.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
       - originConversationID: 3
-        originDialogueID: 123
+        originDialogueID: 121
         destinationConversationID: 3
-        destinationDialogueID: 124
+        destinationDialogueID: 131
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1622.8945
-        y: 977.4113
+        x: 2165.7117
+        y: 838.9269
         width: 160
         height: 30
     - id: 124
@@ -22649,7 +23837,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[IMPLEMENT DEALS]'
+        value: '[lua((Location["Angus"].WeeklyProduction))] iron per week for [lua((Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction))]
+          gold per week during 5 weeks.'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -22675,13 +23864,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 124
+        destinationConversationID: 3
+        destinationDialogueID: 132
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: AngusCountyConversationCleanUp()
+      userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1622.8945
-        y: 1027.4114
+        x: 2493.7803
+        y: 713.48737
         width: 160
         height: 30
     - id: 125
@@ -22744,6 +23939,1126 @@ MonoBehaviour:
         serializedVersion: 2
         x: 2165.5286
         y: 877.0681
+        width: 160
+        height: 30
+    - id: 126
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Angus"].WeeklyProduction))] iron per week for [lua((Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction*0.5))]
+          gold per week during 5 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 126
+        destinationConversationID: 3
+        destinationDialogueID: 133
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2493.6538
+        y: 760.9557
+        width: 160
+        height: 30
+    - id: 127
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Angus"].WeeklyProduction))] iron per week for [lua((Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction))]
+          gold per week during 10 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 127
+        destinationConversationID: 3
+        destinationDialogueID: 135
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2493.6536
+        y: 807.79114
+        width: 160
+        height: 30
+    - id: 128
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[lua((Location["Angus"].WeeklyProduction))] iron per week for [lua((Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction*0.5))]
+          gold per week during 10 weeks.'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 128
+        destinationConversationID: 3
+        destinationDialogueID: 134
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2493.527
+        y: 852.72797
+        width: 160
+        height: 30
+    - id: 129
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: A deal? We've been having a profitable relationship but I don't trust
+          you just yet.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 129
+        destinationConversationID: 3
+        destinationDialogueID: 130
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1496.3123
+        y: 954.62646
+        width: 160
+        height: 30
+    - id: 130
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave]'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: AngusCountyConversationCleanUp()
+      canvasRect:
+        serializedVersion: 2
+        x: 1496.3123
+        y: 1004.62646
+        width: 160
+        height: 30
+    - id: 131
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: What are you talking about? we already have a deal in place...
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 131
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Guthrie"].HasDeal == true
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2497.946
+        y: 605.01624
+        width: 160
+        height: 30
+    - id: 132
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Alright then. I'll deliver it in Dundee every week when I collect the
+          payment
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 132
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Angus"].HasDeal = true;
+
+        Location["Angus"].DealPrice = (Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction);
+
+        Location["Angus"].DealWeeksLeft = 5;
+
+        Location["Angus"].DealQuantity = (Location["Angus"].WeeklyProduction);'
+      canvasRect:
+        serializedVersion: 2
+        x: 2689.9827
+        y: 715.3861
+        width: 160
+        height: 30
+    - id: 133
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Alright then. I'll deliver it in Dundee every week when I collect the
+          payment
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 133
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Angus"].HasDeal = true;
+
+        Location["Angus"].DealPrice = (Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction*0.5);
+
+        Location["Angus"].DealWeeksLeft = 5;
+
+        Location["Angus"].DealQuantity = (Location["Angus"].WeeklyProduction*0.5);'
+      canvasRect:
+        serializedVersion: 2
+        x: 2693.6536
+        y: 764.1203
+        width: 160
+        height: 30
+    - id: 134
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Alright then. I'll deliver it in Dundee every week when I collect the
+          payment
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 134
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Angus"].HasDeal = true;
+
+        Location["Angus"].DealPrice = (Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction*0.5);
+
+        Location["Angus"].DealWeeksLeft = 10;
+
+        Location["Angus"].DealQuantity = (Location["Angus"].WeeklyProduction*0.5);'
+      canvasRect:
+        serializedVersion: 2
+        x: 2690.9954
+        y: 850.82916
+        width: 160
+        height: 30
+    - id: 135
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Alright then. I'll deliver it in Dundee every week when I collect the
+          payment
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 135
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Angus"].HasDeal = true;
+
+        Location["Angus"].DealPrice = (Location["Dundee"].IronOrePrice*0.8)*(Location["Angus"].WeeklyProduction);
+
+        Location["Angus"].DealWeeksLeft = 10;
+
+        Location["Angus"].DealQuantity = (Location["Angus"].WeeklyProduction);'
+      canvasRect:
+        serializedVersion: 2
+        x: 2691.1218
+        y: 808.4241
+        width: 160
+        height: 30
+    - id: 136
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 136
+        destinationConversationID: 3
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 675.4818
+        y: 1104.886
+        width: 160
+        height: 30
+    - id: 137
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 137
+        destinationConversationID: 3
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 677.8869
+        y: 1223.2404
+        width: 160
+        height: 30
+    - id: 138
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 138
+        destinationConversationID: 3
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1807.5282
+        y: 281.5347
+        width: 160
+        height: 30
+    - id: 139
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 139
+        destinationConversationID: 3
+        destinationDialogueID: 63
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1807.7721
+        y: 408.36395
+        width: 160
+        height: 30
+    - id: 140
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 140
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2945.2048
+        y: 342.9276
+        width: 160
+        height: 30
+    - id: 141
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the capacity to store it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 141
+        destinationConversationID: 3
+        destinationDialogueID: 110
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2947.8877
+        y: 211.22034
         width: 160
         height: 30
   - id: 4
@@ -23025,7 +25340,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28
-        y: 146.03796
+        y: 147.25748
         width: 160
         height: 30
     - id: 3
@@ -23651,7 +25966,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 597.58716
-        y: 420.08258
+        y: 418.86307
         width: 160
         height: 30
     - id: 12
@@ -23785,7 +26100,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -23853,7 +26168,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -23892,6 +26207,12 @@ MonoBehaviour:
         destinationDialogueID: 27
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 14
+        destinationConversationID: 4
+        destinationDialogueID: 102
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 10
       userScript: 
       canvasRect:
@@ -23927,7 +26248,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -23966,6 +26287,12 @@ MonoBehaviour:
         destinationDialogueID: 22
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 15
+        destinationConversationID: 4
+        destinationDialogueID: 102
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 10
       userScript: 
       canvasRect:
@@ -24001,7 +26328,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24069,7 +26396,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24108,6 +26435,12 @@ MonoBehaviour:
         destinationDialogueID: 26
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 17
+        destinationConversationID: 4
+        destinationDialogueID: 101
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 25
       userScript: 
       canvasRect:
@@ -24143,7 +26476,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -24182,11 +26515,17 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 18
+        destinationConversationID: 4
+        destinationDialogueID: 101
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 25
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 226
+        x: 227.26584
         y: 776.03796
         width: 160
         height: 30
@@ -24341,8 +26680,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*1)
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 20
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*1);
@@ -24412,8 +26759,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*1)
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 21
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*1);
@@ -24494,8 +26849,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 596
-        y: 649.03796
+        x: 601.7143
+        y: 644.7522
         width: 160
         height: 30
     - id: 23
@@ -24562,8 +26917,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 596
-        y: 776.03796
+        x: 598.8571
+        y: 771.75226
         width: 160
         height: 30
     - id: 24
@@ -24619,8 +26974,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.9)
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 24
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
@@ -24633,8 +26996,8 @@ MonoBehaviour:
         Location["Guthrie"].Cereal = Location["Guthrie"].Cereal - 10;'
       canvasRect:
         serializedVersion: 2
-        x: 419
-        y: 605.9742
+        x: 420.2658
+        y: 601.6885
         width: 160
         height: 30
     - id: 25
@@ -24690,8 +27053,16 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.9)
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 25
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
@@ -24772,8 +27143,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 597
-        y: 730.03796
+        x: 598.4286
+        y: 728.6094
         width: 160
         height: 30
     - id: 27
@@ -24840,8 +27211,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 596
-        y: 608.03796
+        x: 600.123
+        y: 602.81195
         width: 160
         height: 30
     - id: 28
@@ -25245,6 +27616,12 @@ MonoBehaviour:
         destinationDialogueID: 54
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 33
+        destinationConversationID: 4
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -25384,7 +27761,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25423,12 +27800,18 @@ MonoBehaviour:
         destinationDialogueID: 52
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 35
+        destinationConversationID: 4
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 10
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 1181.8717
-        y: 140.64346
+        y: 139.37764
         width: 160
         height: 30
     - id: 36
@@ -25458,7 +27841,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25497,6 +27880,12 @@ MonoBehaviour:
         destinationDialogueID: 48
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 36
+        destinationConversationID: 4
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 10
       userScript: 
       canvasRect:
@@ -25532,7 +27921,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25571,6 +27960,12 @@ MonoBehaviour:
         destinationDialogueID: 43
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 37
+        destinationConversationID: 4
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 10
       userScript: 
       canvasRect:
@@ -25606,7 +28001,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25645,12 +28040,18 @@ MonoBehaviour:
         destinationDialogueID: 51
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 38
+        destinationConversationID: 4
+        destinationDialogueID: 100
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 25
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 1184.789
-        y: 262.97382
+        y: 265.5055
         width: 160
         height: 30
     - id: 39
@@ -25680,7 +28081,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25719,6 +28120,12 @@ MonoBehaviour:
         destinationDialogueID: 47
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 39
+        destinationConversationID: 4
+        destinationDialogueID: 100
+        isConnector: 0
+        priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 25
       userScript: 
       canvasRect:
@@ -25754,7 +28161,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -25791,6 +28198,12 @@ MonoBehaviour:
         originDialogueID: 40
         destinationConversationID: 4
         destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 40
+        destinationConversationID: 4
+        destinationDialogueID: 100
         isConnector: 0
         priority: 2
       conditionsString: Location["Guthrie"].Cereal >= 25
@@ -25861,7 +28274,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*1);
@@ -25874,8 +28289,8 @@ MonoBehaviour:
         Location["Guthrie"].Cereal = Location["Guthrie"].Cereal - 10;'
       canvasRect:
         serializedVersion: 2
-        x: 1361.9451
-        y: 221.97375
+        x: 1363.2109
+        y: 220.70792
         width: 160
         height: 30
     - id: 42
@@ -25938,7 +28353,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*1)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*1))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*1);
@@ -26151,7 +28568,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.9))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
@@ -26195,7 +28614,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That's nice! I'll deliver it to Dundee. Thank you and come again.
+        value: I'll deliver it to Dundee. Thank you and come again.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26228,7 +28647,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.9)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.9)))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
@@ -26242,7 +28663,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1360.9451
-        y: 303.9738
+        y: 302.70798
         width: 160
         height: 30
     - id: 47
@@ -26441,7 +28862,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.8)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.8);
@@ -26485,7 +28908,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That's nice! I'll deliver it to Dundee. Thank you and come again.
+        value: I'll deliver it to Dundee. Thank you and come again.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26518,7 +28941,9 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.8)
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.8))
+        and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
         Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.8);
@@ -26667,8 +29092,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1537.1011
-        y: 138.31319
+        x: 1538.367
+        y: 140.84483
         width: 160
         height: 30
     - id: 53
@@ -26729,8 +29154,8 @@ MonoBehaviour:
       userScript: GuthrieCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 1723.4313
-        y: 236.19395
+        x: 1866.4692
+        y: 237.45976
         width: 160
         height: 30
     - id: 54
@@ -26790,12 +29215,6 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 54
         destinationConversationID: 4
-        destinationDialogueID: 79
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 54
-        destinationConversationID: 4
         destinationDialogueID: 80
         isConnector: 0
         priority: 2
@@ -26808,19 +29227,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 54
         destinationConversationID: 4
-        destinationDialogueID: 82
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 54
-        destinationConversationID: 4
         destinationDialogueID: 91
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 54
-        destinationConversationID: 4
-        destinationDialogueID: 90
         isConnector: 0
         priority: 2
       - originConversationID: 4
@@ -26829,13 +29236,7 @@ MonoBehaviour:
         destinationDialogueID: 92
         isConnector: 0
         priority: 2
-      - originConversationID: 4
-        originDialogueID: 54
-        destinationConversationID: 4
-        destinationDialogueID: 93
-        isConnector: 0
-        priority: 2
-      conditionsString: 
+      conditionsString: Location["Guthrie"].HasDeal == false
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -28452,70 +30853,6 @@ MonoBehaviour:
         y: 708.55316
         width: 160
         height: 30
-    - id: 79
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 6
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[lua((Location["Guthrie"].WeeklyProduction))] cereals per week for
-          [lua((Location["Dundee"].CerealPrice*0.9)*((Location["Guthrie"].WeeklyProduction))]
-          gold per week during 5 weeks.'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 941.9474
-        y: 990.51697
-        width: 160
-        height: 30
     - id: 80
       fields:
       - title: Title
@@ -28575,15 +30912,15 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 80
         destinationConversationID: 4
-        destinationDialogueID: 87
+        destinationDialogueID: 93
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 941.30896
-        y: 941.5809
+        x: 929.11365
+        y: 940.3613
         width: 160
         height: 30
     - id: 81
@@ -28641,139 +30978,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 81
+        destinationConversationID: 4
+        destinationDialogueID: 96
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 941.7346
-        y: 1036.2621
-        width: 160
-        height: 30
-    - id: 82
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 6
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[lua((Location["Guthrie"].WeeklyProduction)*0.5)] cereals per week
-          for [lua((Location["Dundee"].CerealPrice*0.9)*(Location["Guthrie"].WeeklyProduction)*0.5)]
-          gold per week during 5 weeks.'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 942.16016
-        y: 1080.9429
-        width: 160
-        height: 30
-    - id: 87
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: (Location["Dundee"].CerealPrice*0.8)*(Location["Guthrie"].WeeklyProduction)
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 1139.1813
-        y: 944.7723
+        x: 927.1006
+        y: 983.8231
         width: 160
         height: 30
     - id: 88
@@ -28840,7 +31057,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1364.5066
+        x: 1365.7725
         y: 101.00885
         width: 160
         height: 30
@@ -28912,70 +31129,6 @@ MonoBehaviour:
         y: 512.9741
         width: 160
         height: 30
-    - id: 90
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 6
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[lua((Location["Guthrie"].WeeklyProduction))] cereals per week for
-          [lua((Location["Dundee"].CerealPrice*0.9)*((Location["Guthrie"].WeeklyProduction))]
-          gold per week during 10 weeks.'
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 939.1814
-        y: 1166.049
-        width: 160
-        height: 30
     - id: 91
       fields:
       - title: Title
@@ -29031,13 +31184,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 91
+        destinationConversationID: 4
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 940.67053
-        y: 1120.3044
+        x: 927.0364
+        y: 1030.0605
         width: 160
         height: 30
     - id: 92
@@ -29095,16 +31254,97 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 92
+        destinationConversationID: 4
+        destinationDialogueID: 97
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 938.9686
-        y: 1212.8578
+        x: 925.55396
+        y: 1073.8334
         width: 160
         height: 30
     - id: 93
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok, seems like a nice deal. Evey week I'll take the cereals to your
+          warehouse and I'll collect payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 93
+        destinationConversationID: 4
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Guthrie"].HasDeal = true;
+
+        Location["Guthrie"].DealPrice = (Location["Dundee"].CerealPrice*0.8)*(Location["Guthrie"].WeeklyProduction);
+
+        Location["Guthrie"].DealQuantity =  (Location["Guthrie"].WeeklyProduction);
+
+        Location["Guthrie"].DealWeeksLeft = 5 ;'
+      canvasRect:
+        serializedVersion: 2
+        x: 1129.1136
+        y: 940.3613
+        width: 160
+        height: 30
+    - id: 94
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -29131,9 +31371,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[lua((Location["Guthrie"].WeeklyProduction)*0.5)] cereals per week
-          for [lua((Location["Dundee"].CerealPrice*0.9)*(Location["Guthrie"].WeeklyProduction)*0.5)]
-          gold per week during 10 weeks.'
+        value: '[Leave]'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -29161,11 +31399,580 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
+      userScript: GuthrieCountyConversationCleanUp()
+      canvasRect:
+        serializedVersion: 2
+        x: 1354.7234
+        y: 1017.19055
+        width: 160
+        height: 30
+    - id: 95
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: What are you talking about? We already have a deal!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 95
+        destinationConversationID: 4
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Guthrie"].HasDeal == true
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 939.39417
-        y: 1256.4749
+        x: 927.6921
+        y: 842.61865
+        width: 160
+        height: 30
+    - id: 96
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok, seems like a nice deal. Evey week I'll take the cereals to your
+          warehouse and I'll collect payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 96
+        destinationConversationID: 4
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Guthrie"].HasDeal = true;
+
+        Location["Guthrie"].DealPrice = (Location["Dundee"].CerealPrice*0.8)*(Location["Guthrie"].WeeklyProduction*0.5);
+
+        Location["Guthrie"].DealQuantity =  (Location["Guthrie"].WeeklyProduction*0.5);
+
+        Location["Guthrie"].DealWeeksLeft = 5 ;'
+      canvasRect:
+        serializedVersion: 2
+        x: 1128.1381
+        y: 985.4833
+        width: 160
+        height: 30
+    - id: 97
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok, seems like a nice deal. Evey week I'll take the cereals to your
+          warehouse and I'll collect payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 97
+        destinationConversationID: 4
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Guthrie"].HasDeal = true;
+
+        Location["Guthrie"].DealPrice = (Location["Dundee"].CerealPrice*0.8)*(Location["Guthrie"].WeeklyProduction*0.5);
+
+        Location["Guthrie"].DealQuantity =  (Location["Guthrie"].WeeklyProduction*0.5);
+
+        Location["Guthrie"].DealWeeksLeft = 10;'
+      canvasRect:
+        serializedVersion: 2
+        x: 1129.6014
+        y: 1073.2881
+        width: 160
+        height: 30
+    - id: 98
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok, seems like a nice deal. Evey week I'll take the cereals to your
+          warehouse and I'll collect payment.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 98
+        destinationConversationID: 4
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 'Location["Guthrie"].HasDeal = true;
+
+        Location["Guthrie"].DealPrice = (Location["Dundee"].CerealPrice*0.8)*(Location["Guthrie"].WeeklyProduction);
+
+        Location["Guthrie"].DealQuantity =  (Location["Guthrie"].WeeklyProduction);
+
+        Location["Guthrie"].DealWeeksLeft = 10;'
+      canvasRect:
+        serializedVersion: 2
+        x: 1126.9185
+        y: 1029.3857
+        width: 160
+        height: 30
+    - id: 99
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have space in your warehouse. Come back when you do.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 99
+        destinationConversationID: 4
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        < 10)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1725.676
+        y: 167.28069
+        width: 160
+        height: 30
+    - id: 100
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have space in your warehouse. Come back when you do.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 100
+        destinationConversationID: 4
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
+        < 25)
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1725.1758
+        y: 300.82495
+        width: 160
+        height: 30
+    - id: 101
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have space in your warehouse. Come back when you do.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 101
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: ((Location["DundeeWarehouse"].WarehouseLevel*1000) - (Location["DundeeWarehouse"].Cereal))
+        < 25
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 763.0239
+        y: 752.0905
+        width: 160
+        height: 30
+    - id: 102
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have space in your warehouse. Come back when you do.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 102
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: ((Location["DundeeWarehouse"].WarehouseLevel*1000) - (Location["DundeeWarehouse"].Cereal))
+        < 10
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 769.2265
+        y: 627.40704
         width: 160
         height: 30
   syncInfo:
