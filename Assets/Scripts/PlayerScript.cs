@@ -76,6 +76,7 @@
 
 		updateCounties();
 		updateDeals();
+		updateMarket();
 
 	}
 
@@ -165,9 +166,11 @@
 			print("Not enough space in warehouse");
 				}
 			else {
-			money = money - AmbersmithDealPrice;
+			DialogueLua.SetVariable("Money",DialogueLua.GetVariable("Money").AsFloat - AmbersmithDealPrice);
 			DialogueLua.SetLocationField("DundeeWarehouse","Wood",DialogueLua.GetLocationField("DundeeWarehouse", "Wood").AsInt + AmbersmithDealQuantity);
 			DialogueLua.SetLocationField("Ambersmith","DealWeeksLeft",DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt - 1);
+			if(DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt == 0)
+			DialogueLua.SetLocationField("Ambersmith","HasDeal",false);
 			}
 		}
 
@@ -179,9 +182,11 @@
 			print("Not enough space in warehouse");
 				}
 			else {
-			money = money - AngusDealPrice;
+			DialogueLua.SetVariable("Money",DialogueLua.GetVariable("Money").AsFloat - AngusDealPrice);
 			DialogueLua.SetLocationField("DundeeWarehouse","IronOre",DialogueLua.GetLocationField("DundeeWarehouse", "IronOre").AsInt + AngusDealQuantity);
 			DialogueLua.SetLocationField("Angus","DealWeeksLeft",DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt - 1);
+			if(DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt == 0)
+			DialogueLua.SetLocationField("Angus","HasDeal",false);
 			}
 		}
 
@@ -193,14 +198,13 @@
 			print("Not enough space in warehouse");
 				}
 			else {
-			money = money - GuthrieDealPrice;
+			DialogueLua.SetVariable("Money",DialogueLua.GetVariable("Money").AsFloat - GuthrieDealPrice);
 			DialogueLua.SetLocationField("DundeeWarehouse","Cereal",DialogueLua.GetLocationField("DundeeWarehouse", "Cereal").AsInt + GuthrieDealQuantity);
 			DialogueLua.SetLocationField("Guthrie","DealWeeksLeft",DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt - 1);
+			if(DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt == 0)
+			DialogueLua.SetLocationField("Guthrie","HasDeal",false);
 			}
 		}
-
-
-
 		}
 
 		int warehouseTotal(){
@@ -221,5 +225,100 @@
 			DialogueLua.GetLocationField("DundeeWarehouse", "Clothes").AsInt);
 
 	}
+
+	void updateMarket(){
+	
+	System.Random rnd = new System.Random();
+	float randomValue = rnd.Next(0, 11);
+	float randomFactor = randomValue/10;
+	float signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Fish", Math.Max(DialogueLua.GetLocationField("Dundee", "Fish").AsInt - (10*randomFactor) , 0));
+	else DialogueLua.SetLocationField("Dundee", "Fish", DialogueLua.GetLocationField("Dundee", "Fish").AsInt + (10*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+
+	DialogueLua.SetLocationField("Dundee", "Meat", Math.Max(DialogueLua.GetLocationField("Dundee", "Meat").AsInt - (20*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Meat", DialogueLua.GetLocationField("Dundee", "Meat").AsInt + (20*randomFactor));
+	
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	DialogueLua.SetLocationField("Dundee", "Cereal", Math.Max(DialogueLua.GetLocationField("Dundee", "Cereal").AsInt - (200*randomFactor), 0));
+	
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	DialogueLua.SetLocationField("Dundee", "IronOre", Math.Max(DialogueLua.GetLocationField("Dundee", "IronOre").AsInt - (150*randomFactor), 0));
+	
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "GoldOre", Math.Max(DialogueLua.GetLocationField("Dundee", "GoldOre").AsInt - (10*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "GoldOre", DialogueLua.GetLocationField("Dundee", "GoldOre").AsInt + (10*randomFactor));
+	
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	DialogueLua.SetLocationField("Dundee", "Wood", Math.Max(DialogueLua.GetLocationField("Dundee", "Wood").AsInt - (250*randomFactor), 0));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Wool", Math.Max(DialogueLua.GetLocationField("Dundee", "Wool").AsInt - (10*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Wool", DialogueLua.GetLocationField("Dundee", "Wool").AsInt + (10*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Bread", Math.Max(DialogueLua.GetLocationField("Dundee", "Bread").AsInt - (50*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Bread", DialogueLua.GetLocationField("Dundee", "Bread").AsInt + (50*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Ale", Math.Max(DialogueLua.GetLocationField("Dundee", "Ale").AsInt - (40*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Ale", DialogueLua.GetLocationField("Dundee", "Ale").AsInt + (40*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Tools", Math.Max(DialogueLua.GetLocationField("Dundee", "Tools").AsInt - (25*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Tools", DialogueLua.GetLocationField("Dundee", "Tools").AsInt + (25*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Weapons", Math.Max(DialogueLua.GetLocationField("Dundee", "Weapons").AsInt - (18*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Weapons", DialogueLua.GetLocationField("Dundee", "Weapons").AsInt + (18*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Jewelry", Math.Max(DialogueLua.GetLocationField("Dundee", "Jewelry").AsInt - (5*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Jewelry", DialogueLua.GetLocationField("Dundee", "Jewelry").AsInt + (5*randomFactor));
+
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Furniture", Math.Max(DialogueLua.GetLocationField("Dundee", "Furniture").AsInt - (33*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Furniture", DialogueLua.GetLocationField("Dundee", "Furniture").AsInt + (33*randomFactor));
+	
+	randomValue = rnd.Next(0, 11);
+	randomFactor = randomValue/10;
+	signal = (rnd.Next()%2);
+	if(signal == 0)
+	DialogueLua.SetLocationField("Dundee", "Clothes", Math.Max(DialogueLua.GetLocationField("Dundee", "Clothes").AsInt - (10*randomFactor), 0));
+	else DialogueLua.SetLocationField("Dundee", "Clothes", DialogueLua.GetLocationField("Dundee", "Clothes").AsInt + (10*randomFactor));
+	
+	}
 		
-		}
+}
