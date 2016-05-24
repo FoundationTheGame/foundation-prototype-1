@@ -859,7 +859,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: 100000
+      value: 1000
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
@@ -873,7 +873,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: 60
+      value: 0
       type: 1
       typeString: CustomFieldType_Number
     - title: Description

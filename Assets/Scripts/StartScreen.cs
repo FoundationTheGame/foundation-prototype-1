@@ -14,9 +14,13 @@ public class StartScreen : MonoBehaviour {
 	
 	}
 
-    public void OnMouseDown()
+    public void Play()
     {
-
         SceneManager.LoadScene("game-scene");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }

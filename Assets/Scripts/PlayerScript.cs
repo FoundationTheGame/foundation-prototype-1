@@ -22,7 +22,7 @@
 	public GameObject playerDate;
 	private Text moneyText;
 	private Text dateText;
-	private float timer = 5.0f;
+	private float timer = 10.0f;
 	private int increment = 0;
 	private int daysPassed = 0;
 
@@ -95,21 +95,21 @@
 
 		switch (increment){
 			case 0:
-				timer = 5.0f;
+				timer = 10.0f;
 				timer -= Time.deltaTime;
 				play2.SetActive(false);
 				play3.SetActive(false);
 				play4.SetActive(false);
 				break;
 			case 1:
-				timer = 4.0f;
+				timer = 7.0f;
 				timer -= Time.deltaTime;
 				play2.SetActive(true);
 				play3.SetActive(false);
 				play4.SetActive(false);
 				break;
 			case 2:
-				timer = 2.0f;
+				timer = 4.0f;
 				timer -= Time.deltaTime;
 				play2.SetActive(true);
 				play3.SetActive(true);
