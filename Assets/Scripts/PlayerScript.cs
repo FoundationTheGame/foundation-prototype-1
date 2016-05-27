@@ -14,8 +14,6 @@
 	public GameObject AmbersmithReport;
 	public GameObject AngusReport;
 	public GameObject GuthrieReport;
-	public GameObject Income;
-	public GameObject Expenses;
 	public GameObject quitReport;
 
 	public GameObject playerMoney;
@@ -160,7 +158,7 @@
 
 		int AmbersmithDealQuantity = DialogueLua.GetLocationField("Ambersmith","DealQuantity").AsInt;
 		int AngusDealQuantity = DialogueLua.GetLocationField("Angus","DealQuantity").AsInt;
-		int GuthrieDealQuantity = DialogueLua.GetLocationField("Gjuthrie","DealQuantity").AsInt;
+		int GuthrieDealQuantity = DialogueLua.GetLocationField("Guthrie","DealQuantity").AsInt;
 
 		int AmbersmithDealWeeks = DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt;
 		int AngusDealWeeks = DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt;
@@ -179,7 +177,6 @@
 			DialogueLua.SetLocationField("Ambersmith","DealWeeksLeft",DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt - 1);
 			if(DialogueLua.GetLocationField("Ambersmith","DealWeeksLeft").AsInt == 0)
 			DialogueLua.SetLocationField("Ambersmith","HasDeal",false);
-			DialogueLua.SetVariable("Expenses",DialogueLua.GetVariable("Expenses").AsFloat+AmbersmithDealPrice);
 			}
 		}
 
@@ -196,7 +193,6 @@
 			DialogueLua.SetLocationField("Angus","DealWeeksLeft",DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt - 1);
 			if(DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsInt == 0)
 			DialogueLua.SetLocationField("Angus","HasDeal",false);
-			DialogueLua.SetVariable("Expenses",DialogueLua.GetVariable("Expenses").AsFloat+AngusDealPrice);
 			}
 		}
 
@@ -213,7 +209,6 @@
 			DialogueLua.SetLocationField("Guthrie","DealWeeksLeft",DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt - 1);
 			if(DialogueLua.GetLocationField("Guthrie","DealWeeksLeft").AsInt == 0)
 			DialogueLua.SetLocationField("Guthrie","HasDeal",false);
-			DialogueLua.SetVariable("Expenses",DialogueLua.GetVariable("Expenses").AsFloat+GuthrieDealPrice);
 			}
 		}
 		}
@@ -343,13 +338,10 @@
 		if(DialogueLua.GetLocationField("Angus","HasDeal").AsBool)
 		AngusReport.GetComponent<Text>().text = "Angus produced "+ DialogueLua.GetLocationField("Angus","DealQuantity").AsString +" iron ore for "+ DialogueLua.GetLocationField("Angus","DealWeeksLeft").AsString + " more weeks. (Price: "+ DialogueLua.GetLocationField("Angus","DealPrice").AsString + ").";
 		
-		Income.GetComponent<Text>().text = "Income :"+ DialogueLua.GetVariable("Income").AsString;
-		Expenses.GetComponent<Text>().text = "Expenses :"+ DialogueLua.GetVariable("Expenses").AsString;
+
 		
 		quitReport.GetComponent<Button>().onClick.AddListener(() =>
 		{
-			 DialogueLua.SetVariable("Income",0);
-			 DialogueLua.SetVariable("Expenses",0);
 			weeklyReport.SetActive(false);
 			timer = timer2;
 		});

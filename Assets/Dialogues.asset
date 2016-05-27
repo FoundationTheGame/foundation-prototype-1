@@ -2329,7 +2329,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2409,7 +2409,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*1)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2489,7 +2489,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2538,7 +2538,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 3013.759
+        x: 3014.759
         y: 317.71524
         width: 160
         height: 30
@@ -2569,7 +2569,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2649,7 +2649,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2729,7 +2729,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*1)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2778,7 +2778,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 3015.2175
+        x: 3014.2175
         y: 466.8931
         width: 160
         height: 30
@@ -2842,14 +2842,14 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 2;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
@@ -2918,14 +2918,14 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 5;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
@@ -2994,20 +2994,20 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
         serializedVersion: 2
         x: 3194.7632
-        y: 354.99698
+        y: 352.99698
         width: 160
         height: 30
     - id: 42
@@ -3070,14 +3070,14 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 2;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -3146,14 +3146,14 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 5;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -3222,14 +3222,14 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -3265,7 +3265,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3333,7 +3333,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*1)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3382,7 +3382,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1474.6329
+        x: 1472.5712
         y: 495.9921
         width: 160
         height: 30
@@ -3413,7 +3413,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3462,7 +3462,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1475.6355
+        x: 1476.6355
         y: 457.2274
         width: 160
         height: 30
@@ -3493,7 +3493,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3561,7 +3561,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3641,7 +3641,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*1)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3835,7 +3835,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -3903,7 +3903,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -3971,7 +3971,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4039,7 +4039,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4107,7 +4107,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4175,7 +4175,7 @@ MonoBehaviour:
         destinationDialogueID: 135
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4243,14 +4243,14 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 5;
+        Variable["Reputation"] = Variable["Reputation"] +10;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
@@ -4319,14 +4319,14 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
@@ -4395,14 +4395,14 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 5;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -4471,14 +4471,14 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -4547,7 +4547,7 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4615,7 +4615,7 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4683,7 +4683,7 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4751,7 +4751,7 @@ MonoBehaviour:
         destinationDialogueID: 83
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -4817,8 +4817,8 @@ MonoBehaviour:
       userScript: AmbersmithCountyConversationCleanUp()
       canvasRect:
         serializedVersion: 2
-        x: 1755.1869
-        y: 533.3296
+        x: 1753.4011
+        y: 534.2225
         width: 160
         height: 30
     - id: 84
@@ -4916,7 +4916,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4984,7 +4984,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*1)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5064,7 +5064,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.9)] gold.
+        value: 10 wood for [lua((Location["Dundee"].WoodPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5132,7 +5132,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5200,7 +5200,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5268,7 +5268,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*1)] gold.
+        value: 25 wood for [lua((Location["Dundee"].WoodPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5381,19 +5381,19 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 10)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 10;'
       canvasRect:
         serializedVersion: 2
-        x: 736.2523
+        x: 734.2523
         y: 375.8076
         width: 160
         height: 30
@@ -5457,12 +5457,12 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 910.89923
-        y: 373.24237
+        y: 374.24237
         width: 160
         height: 30
     - id: 93
@@ -5559,8 +5559,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 817.79285
-        y: 311.25674
+        x: 781.79285
+        y: 307.25674
         width: 160
         height: 30
     - id: 94
@@ -5685,14 +5685,14 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].WoodPrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Wood))
         >= 25)
       userScript: 'Actor["Balthazar"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].WoodPrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Wood = Location["DundeeWarehouse"].Wood + 25;'
       canvasRect:
@@ -5761,7 +5761,7 @@ MonoBehaviour:
         destinationDialogueID: 94
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].WoodPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -8925,8 +8925,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1084.5781
-        y: 370.8098
+        x: 1085.5781
+        y: 374.8098
         width: 160
         height: 30
     - id: 145
@@ -14748,7 +14748,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 76
+        destinationConversationID: 2
+        destinationDialogueID: 80
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -14810,7 +14816,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 77
+        destinationConversationID: 2
+        destinationDialogueID: 81
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -14872,7 +14884,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 78
+        destinationConversationID: 2
+        destinationDialogueID: 82
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
@@ -14934,13 +14952,1347 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 79
+        destinationConversationID: 2
+        destinationDialogueID: 83
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1830.0265
+        x: 1831.203
         y: 359.72876
+        width: 160
+        height: 30
+    - id: 80
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: That will cost you 2000 coins.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 80
+        destinationConversationID: 2
+        destinationDialogueID: 89
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 80
+        destinationConversationID: 2
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2025.3204
+        y: 228.14053
+        width: 160
+        height: 30
+    - id: 81
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: That will cost you 2200 coins.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 81
+        destinationConversationID: 2
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 81
+        destinationConversationID: 2
+        destinationDialogueID: 92
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2025.3207
+        y: 269.14053
+        width: 160
+        height: 30
+    - id: 82
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: That will cost you 2500 coins.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 82
+        destinationConversationID: 2
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 82
+        destinationConversationID: 2
+        destinationDialogueID: 93
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2026.4972
+        y: 314.1405
+        width: 160
+        height: 30
+    - id: 83
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: That will cost you 1800 coins.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 83
+        destinationConversationID: 2
+        destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 83
+        destinationConversationID: 2
+        destinationDialogueID: 94
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 83
+        destinationConversationID: 2
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2024.1442
+        y: 363.8464
+        width: 160
+        height: 30
+    - id: 84
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Great. I'll order it's contruction!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 84
+        destinationConversationID: 2
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= 2000
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2422.9683
+        y: 221.66992
+        width: 160
+        height: 30
+    - id: 85
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Great. I'll order it's contruction!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 85
+        destinationConversationID: 2
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= 2200
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2424.733
+        y: 262.25818
+        width: 160
+        height: 30
+    - id: 86
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Great. I'll order it's contruction!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 86
+        destinationConversationID: 2
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= 2500
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2426.4973
+        y: 309.90518
+        width: 160
+        height: 30
+    - id: 87
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Great. I'll order it's contruction!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 87
+        destinationConversationID: 2
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] >= 1800
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2423.5562
+        y: 362.25818
+        width: 160
+        height: 30
+    - id: 89
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: OK
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 89
+        destinationConversationID: 2
+        destinationDialogueID: 84
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 89
+        destinationConversationID: 2
+        destinationDialogueID: 91
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2227.6736
+        y: 222.84644
+        width: 160
+        height: 30
+    - id: 90
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: No thanks [Leave]
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: DundeeCityConversationCleanUp()
+      canvasRect:
+        serializedVersion: 2
+        x: 2018.262
+        y: 488.72882
+        width: 160
+        height: 30
+    - id: 91
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the coin for that! come back when you do!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 91
+        destinationConversationID: 2
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < 2000
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2594.7324
+        y: 222.25818
+        width: 160
+        height: 30
+    - id: 92
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: OK
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 92
+        destinationConversationID: 2
+        destinationDialogueID: 85
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 92
+        destinationConversationID: 2
+        destinationDialogueID: 96
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2227.0852
+        y: 266.96408
+        width: 160
+        height: 30
+    - id: 93
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ok
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 93
+        destinationConversationID: 2
+        destinationDialogueID: 86
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 93
+        destinationConversationID: 2
+        destinationDialogueID: 97
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2224.1445
+        y: 313.55228
+        width: 160
+        height: 30
+    - id: 94
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: OK
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 94
+        destinationConversationID: 2
+        destinationDialogueID: 87
+        isConnector: 0
+        priority: 2
+      - originConversationID: 2
+        originDialogueID: 94
+        destinationConversationID: 2
+        destinationDialogueID: 98
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2225.3206
+        y: 365.61115
+        width: 160
+        height: 30
+    - id: 95
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave]'
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: DundeeCityConversationCleanUp()
+      canvasRect:
+        serializedVersion: 2
+        x: 2794.1443
+        y: 296.37585
+        width: 160
+        height: 30
+    - id: 96
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the coin for that! come back when you do!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 96
+        destinationConversationID: 2
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < 2200
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2595.3206
+        y: 264.0229
+        width: 160
+        height: 30
+    - id: 97
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the coin for that! come back when you do!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 97
+        destinationConversationID: 2
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < 2500
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2597.0852
+        y: 310.49347
+        width: 160
+        height: 30
+    - id: 98
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You don't have the coin for that! come back when you do!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 98
+        destinationConversationID: 2
+        destinationDialogueID: 95
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Money"] < 1800
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 2598.8499
+        y: 362.8464
+        width: 160
+        height: 30
+    - id: 99
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 8
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Thank you. [Leave]
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: GameEnd()
+      canvasRect:
+        serializedVersion: 2
+        x: 2422.9683
+        y: 472.84637
         width: 160
         height: 30
   - id: 3
@@ -15862,7 +17214,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -15930,7 +17282,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*1)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -16010,7 +17362,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -16047,7 +17399,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 140.0389
+        x: 141.0389
         y: 1064.133
         width: 160
         height: 30
@@ -16179,14 +17531,14 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
@@ -17888,7 +19240,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17956,7 +19308,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18036,7 +19388,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*1)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18149,14 +19501,14 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
@@ -18226,14 +19578,14 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
@@ -18303,7 +19655,7 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -18436,7 +19788,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18504,7 +19856,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18572,7 +19924,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*1)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18622,7 +19974,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 140.0389
-        y: 1228.9934
+        y: 1229.9934
         width: 160
         height: 30
     - id: 52
@@ -18685,14 +20037,14 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -18762,11 +20114,11 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 506.74615
+        x: 507.74615
         y: 1225.5981
         width: 160
         height: 30
@@ -18878,7 +20230,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -18946,7 +20298,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -19026,7 +20378,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*1)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -19139,14 +20491,14 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -19216,7 +20568,7 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -19284,14 +20636,14 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -19361,7 +20713,7 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -19589,7 +20941,7 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -19657,7 +21009,7 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -21246,7 +22598,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21296,7 +22648,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 2398.863
-        y: 188.04953
+        y: 187.04953
         width: 160
         height: 30
     - id: 88
@@ -21326,7 +22678,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21406,7 +22758,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*1)] gold.
+        value: 10 iron for [lua((Location["Dundee"].IronOrePrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21486,7 +22838,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21566,7 +22918,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -21646,7 +22998,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*1)] gold.
+        value: 25 iron for [lua((Location["Dundee"].IronOrePrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -22167,14 +23519,14 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -22244,7 +23596,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -22312,14 +23664,14 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -22389,7 +23741,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -22457,14 +23809,14 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*25*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 25)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*25*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 25;'
@@ -22534,7 +23886,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*25*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -22602,14 +23954,14 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
@@ -22679,14 +24031,14 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
@@ -22756,7 +24108,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -22824,7 +24176,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -22892,20 +24244,20 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].IronOrePrice)*10*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].IronOre))
         >= 10)
       userScript: 'Actor["Edwin"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].IronOrePrice)*10*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].IronOre = Location["DundeeWarehouse"].IronOre
         + 10;'
       canvasRect:
         serializedVersion: 2
-        x: 2580.5122
+        x: 2581.5122
         y: 189.7247
         width: 160
         height: 30
@@ -22969,7 +24321,7 @@ MonoBehaviour:
         destinationDialogueID: 110
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].IronOrePrice)*10*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -26128,7 +27480,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26196,7 +27548,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26276,7 +27628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26325,7 +27677,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 227
+        x: 228
         y: 649.03796
         width: 160
         height: 30
@@ -26356,7 +27708,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26393,8 +27745,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 228
-        y: 690.03796
+        x: 229
+        y: 691.03796
         width: 160
         height: 30
     - id: 17
@@ -26424,7 +27776,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26504,7 +27856,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -26554,7 +27906,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 227.26584
-        y: 776.03796
+        y: 777.03796
         width: 160
         height: 30
     - id: 19
@@ -26715,14 +28067,14 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         10;
@@ -26730,7 +28082,7 @@ MonoBehaviour:
         Location["Guthrie"].Cereal = Location["Guthrie"].Cereal - 10;'
       canvasRect:
         serializedVersion: 2
-        x: 418
+        x: 419
         y: 647.9741
         width: 160
         height: 30
@@ -26794,14 +28146,14 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         25;
@@ -26873,7 +28225,7 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -26941,12 +28293,12 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 598.8571
-        y: 771.75226
+        y: 772.75226
         width: 160
         height: 30
     - id: 24
@@ -27009,14 +28361,14 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 4;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         10;
@@ -27024,8 +28376,8 @@ MonoBehaviour:
         Location["Guthrie"].Cereal = Location["Guthrie"].Cereal - 10;'
       canvasRect:
         serializedVersion: 2
-        x: 420.2658
-        y: 601.6885
+        x: 421.2658
+        y: 599.6885
         width: 160
         height: 30
     - id: 25
@@ -27088,14 +28440,14 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *25*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 4;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         25;
@@ -27104,7 +28456,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 417
-        y: 731.03796
+        y: 730.03796
         width: 160
         height: 30
     - id: 26
@@ -27167,12 +28519,12 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 598.4286
-        y: 728.6094
+        y: 729.6094
         width: 160
         height: 30
     - id: 27
@@ -27235,12 +28587,12 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 600.123
-        y: 602.81195
+        y: 601.81195
         width: 160
         height: 30
     - id: 28
@@ -27789,7 +29141,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -27869,7 +29221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.8)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -27949,7 +29301,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*1)] gold.
+        value: 10 cereals for [lua((Location["Dundee"].CerealPrice)*10*0.9)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -28029,7 +29381,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.7)] gold.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -28078,11 +29430,91 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1184.789
+        x: 1185.789
         y: 265.5055
         width: 160
         height: 30
     - id: 39
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 6
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*0.8)] gold.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 39
+        destinationConversationID: 4
+        destinationDialogueID: 46
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 39
+        destinationConversationID: 4
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 39
+        destinationConversationID: 4
+        destinationDialogueID: 100
+        isConnector: 0
+        priority: 2
+      conditionsString: Location["Guthrie"].Cereal >= 25
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 1184.8528
+        y: 306.0562
+        width: 160
+        height: 30
+    - id: 40
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -28137,86 +29569,6 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
-        originDialogueID: 39
-        destinationConversationID: 4
-        destinationDialogueID: 46
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 39
-        destinationConversationID: 4
-        destinationDialogueID: 47
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 39
-        destinationConversationID: 4
-        destinationDialogueID: 100
-        isConnector: 0
-        priority: 2
-      conditionsString: Location["Guthrie"].Cereal >= 25
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 1184.8528
-        y: 304.0562
-        width: 160
-        height: 30
-    - id: 40
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 6
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 25 cereals for [lua((Location["Dundee"].CerealPrice)*25*1)] gold.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
         originDialogueID: 40
         destinationConversationID: 4
         destinationDialogueID: 44
@@ -28239,7 +29591,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1182.789
-        y: 348.0562
+        y: 349.0562
         width: 160
         height: 30
     - id: 41
@@ -28302,14 +29654,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         10;
@@ -28317,7 +29669,7 @@ MonoBehaviour:
         Location["Guthrie"].Cereal = Location["Guthrie"].Cereal - 10;'
       canvasRect:
         serializedVersion: 2
-        x: 1363.2109
+        x: 1362.2109
         y: 220.70792
         width: 160
         height: 30
@@ -28381,14 +29733,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*1))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.9))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*1);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
 
-        Variable["Reputation"] = Variable["Reputation"] + 7;
+        Variable["Reputation"] = Variable["Reputation"] + 15;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         25;
@@ -28397,7 +29749,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1362.6974
-        y: 346.05637
+        y: 345.05637
         width: 160
         height: 30
     - id: 43
@@ -28460,7 +29812,7 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -28528,11 +29880,11 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*1)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.9)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1542.6974
+        x: 1541.6974
         y: 348.05637
         width: 160
         height: 30
@@ -28596,14 +29948,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.9))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*10*0.8))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 4;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         10;
@@ -28675,14 +30027,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.9)))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.8)))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.9);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.8);
 
-        Variable["Reputation"] = Variable["Reputation"] + 4;
+        Variable["Reputation"] = Variable["Reputation"] + 10;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         25;
@@ -28754,12 +30106,12 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 1540.9451
-        y: 302.9738
+        y: 303.9738
         width: 160
         height: 30
     - id: 48
@@ -28822,11 +30174,11 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.9)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.8)
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 1539.9451
+        x: 1538.9451
         y: 180.97375
         width: 160
         height: 30
@@ -28890,14 +30242,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice) *10*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 10)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*10*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 2;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         10;
@@ -28969,14 +30321,14 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.8))
+      conditionsString: (Variable["Money"] >= ((Location["Dundee"].CerealPrice)*25*0.7))
         and ((((Location["DundeeWarehouse"].WarehouseLevel)*1000) - (Location["DundeeWarehouse"].Cereal))
         >= 25)
       userScript: 'Actor["Giselle"].KnowsPlayer = true;
 
-        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.8);
+        Variable["Money"] = Variable["Money"] - ((Location["Dundee"].CerealPrice)*25*0.7);
 
-        Variable["Reputation"] = Variable["Reputation"] + 2;
+        Variable["Reputation"] = Variable["Reputation"] + 5;
 
         Location["DundeeWarehouse"].Cereal = Location["DundeeWarehouse"].Cereal +
         25;
@@ -28985,7 +30337,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1359.9358
-        y: 264.06552
+        y: 265.06552
         width: 160
         height: 30
     - id: 51
@@ -29048,7 +30400,7 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*25*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -29116,7 +30468,7 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.8)
+      conditionsString: Variable["Money"] < ((Location["Dundee"].CerealPrice)*10*0.7)
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -31862,7 +33214,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1725.1758
-        y: 300.82495
+        y: 299.82495
         width: 160
         height: 30
     - id: 101

@@ -10420,8 +10420,6 @@ MonoBehaviour:
   AmbersmithReport: {fileID: 855773171}
   AngusReport: {fileID: 838272225}
   GuthrieReport: {fileID: 1033098572}
-  Income: {fileID: 1916775181}
-  Expenses: {fileID: 1463901750}
   quitReport: {fileID: 1613052959}
   playerMoney: {fileID: 2015193497}
   playerDate: {fileID: 1338865299}
